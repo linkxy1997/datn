@@ -1,0 +1,132 @@
+<div class="container-fluid">
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar border-right bg-secondary rounded">
+            <nav class="nav flex-column nav-fill ">
+                <a class="nav-link active border-bottom text-center hover text-light" href="#">Home</a>
+                <a class="nav-link border-bottom text-center text-light" href="#">Crash</a>
+                <a class="nav-link border-bottom text-center text-light" href="#">Link</a>
+                <a class="nav-link disabled border-bottom text-light" href="#">Disabled</a>
+            </nav>
+        </div>
+        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 bd-content">
+
+            <h1 class="bd-title" id="content">Smart Home</h1>
+            <p class="bd-lead">Documentation and examples for opt-in Controll Device and Display Data from SmartHome (given me prevalent use in JavaScript plugins) with Angular 7.</p>
+
+
+            <div class="bd-example">
+                <div class="row" id="mymain">
+                    <div class="col-sm-6 col-md-3 list-group">
+
+                        <div class="list-group-item">
+                            <i class="far fa-sun fa-fw"></i>
+                            <i>Temperature:</i>
+                            <i id="temperature">  {{states?.temperature}}°C</i>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 col-md-3 list-group">
+                        <div class="list-group-item">
+                            <i class="far fa-lightbulb fa-fw"></i>
+                            <i>Light: </i>
+                            <i id="lightDependent">{{states?.lightDependent}}</i>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 list-group">
+                        <div class="list-group-item">
+                            <i class="fas fa-cloud fa-fw"></i>
+                            <i> Humidity:</i>
+                            <i id="humidity">  {{states?.humidity}} %</i>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 list-group">
+                        <div class="list-group-item">
+                            <i class="fas fa-fire fa-fw"></i>
+                            <i>Gas:</i>
+                            <i id="gas">{{states?.raintStatus}} </i>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 list-group">
+                        <div class="list-group-item">
+                            <i class="fas fa-cloud-rain"></i>
+                            <i>Rain:</i>
+                            <i id="gas">{{states?.raintStatus}} </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card">
+                                <div class="card-header">
+                                    Light
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <input id="toggle-event" (change)="controllLed()" type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-onstyle="light" data-offstyle="danger">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card">
+                                <div class="card-header">
+                                    Air Conditioner
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <input id="toggle-air" type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-onstyle="light" data-offstyle="danger">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card">
+                                <div class="card-header">
+                                    Light
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <input id="toggle-event1" type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-onstyle="light" data-offstyle="danger">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card">
+                                <div class="card-header">
+                                    Automation State
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <input id="toggle-auto" type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-onstyle="light" data-offstyle="danger">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
