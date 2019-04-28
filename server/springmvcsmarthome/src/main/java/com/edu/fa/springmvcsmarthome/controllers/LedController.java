@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.edu.fa.springmvcsmarthome.entities.Led;
 import com.edu.fa.springmvcsmarthome.services.LedService;
 import com.edu.fa.springmvcsmarthome.services.SequenceService;
-import com.edu.fa.springmvcsmarthome.utils.Constant;
+import com.edu.fa.springmvcsmarthome.utils.Constants;
 
 @CrossOrigin
 @RestController
@@ -39,11 +39,8 @@ public class LedController {
       MediaType.APPLICATION_JSON_VALUE })
   @ResponseBody
   public ResponseEntity<Led> save(@RequestBody Led led) {
-
-    led.setLedId(sequenceService.getNextSequenceId(Constant.LED_SEQ_KEY));
+    led.setLedId(sequenceService.getNextSequenceId(Constants.LED_SEQ_KEY));
     led.setTimeChange(new Date());
-    System.out.println(led);
-
     if (ledService.save(led)) {
       return new ResponseEntity<Led>(led, HttpStatus.OK);
     }

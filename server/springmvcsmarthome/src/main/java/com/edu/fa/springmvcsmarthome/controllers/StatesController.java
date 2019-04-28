@@ -35,7 +35,7 @@ import com.edu.fa.springmvcsmarthome.services.LightDependentResistorService;
 import com.edu.fa.springmvcsmarthome.services.RainWaterSensorService;
 import com.edu.fa.springmvcsmarthome.services.SequenceService;
 import com.edu.fa.springmvcsmarthome.services.TemperatureService;
-import com.edu.fa.springmvcsmarthome.utils.Constant;
+import com.edu.fa.springmvcsmarthome.utils.Constants;
 
 @CrossOrigin
 @RestController
@@ -113,13 +113,13 @@ public class StatesController {
       MediaType.APPLICATION_JSON_VALUE })
   public ResponseEntity<States> setStates(@RequestBody States states) {
     Date timeChange = new Date();
-    int humidityId = sequenceService.getNextSequenceId(Constant.HUMI_SEQ_KEY);
+    int humidityId = sequenceService.getNextSequenceId(Constants.HUMI_SEQ_KEY);
     int temperatureId = sequenceService
-        .getNextSequenceId(Constant.TEMP_SEQ_KEY);
+        .getNextSequenceId(Constants.TEMP_SEQ_KEY);
     int lightDependentId = sequenceService
-        .getNextSequenceId(Constant.LIGHT_DEPENDENT_RESISTOR);
+        .getNextSequenceId(Constants.LIGHT_DEPENDENT_RESISTOR);
     int raintStatusId = sequenceService
-        .getNextSequenceId(Constant.RAIN_WATER_SENSOR);
+        .getNextSequenceId(Constants.RAIN_WATER_SENSOR);
     Humidity humidity = new Humidity(humidityId, states.getHumidity(),
         timeChange);
     Temperature temperature = new Temperature(temperatureId,

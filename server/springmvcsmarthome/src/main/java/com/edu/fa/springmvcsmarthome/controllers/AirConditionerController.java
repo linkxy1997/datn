@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.edu.fa.springmvcsmarthome.entities.AirConditioner;
 import com.edu.fa.springmvcsmarthome.services.AirConditionerService;
 import com.edu.fa.springmvcsmarthome.services.SequenceService;
-import com.edu.fa.springmvcsmarthome.utils.Constant;
+import com.edu.fa.springmvcsmarthome.utils.Constants;
 
 @CrossOrigin
 @RestController
@@ -53,7 +53,7 @@ public class AirConditionerController {
       @RequestBody AirConditioner airConditioner) {
     airConditioner.setTimeChange(new Date());
     airConditioner
-        .setId(sequenceService.getNextSequenceId(Constant.AIR_CONDITIONER));
+        .setId(sequenceService.getNextSequenceId(Constants.AIR_CONDITIONER));
     if (airConditionerService.save(airConditioner)) {
       return new ResponseEntity<AirConditioner>(airConditioner,
           HttpStatus.CREATED);

@@ -11,8 +11,6 @@ package com.edu.fa.springmvcsmarthome.services.impl;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -34,7 +32,7 @@ public class LedServiceImpl implements LedService {
    */
   @Transactional
   @Override
-  public boolean save(Led led) {
+  public boolean save(final Led led) {
     // TODO Auto-generated method stub
     return ledRepository.save(led) != null;
   }
@@ -50,15 +48,4 @@ public class LedServiceImpl implements LedService {
     return ledRepository.findTopByOrderByLedIdDesc();
   }
 
-  /**
-   * Start point.
-   *
-   * @param args String Arrays
-   */
-  public static void main(String[] args) {
-    @SuppressWarnings("resource")
-    ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-    LedService ledService = context.getBean(LedService.class);
-    System.out.println(ledService.getCurrentLedStt());
-  }
 }

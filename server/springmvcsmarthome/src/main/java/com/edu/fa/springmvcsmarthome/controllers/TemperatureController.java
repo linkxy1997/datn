@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.edu.fa.springmvcsmarthome.entities.Temperature;
 import com.edu.fa.springmvcsmarthome.services.SequenceService;
 import com.edu.fa.springmvcsmarthome.services.TemperatureService;
-import com.edu.fa.springmvcsmarthome.utils.Constant;
+import com.edu.fa.springmvcsmarthome.utils.Constants;
 
 @CrossOrigin
 @RestController
@@ -43,7 +43,7 @@ public class TemperatureController {
       MediaType.APPLICATION_JSON_VALUE })
   public boolean saveTemperature(@ModelAttribute Temperature temperature) {
     temperature.setTemperatureId(
-        sequenceService.getNextSequenceId(Constant.TEMP_SEQ_KEY));
+        sequenceService.getNextSequenceId(Constants.TEMP_SEQ_KEY));
     temperature.setTimeAdd(new Date());
     return temperatureService.saveTemperature(temperature);
   }

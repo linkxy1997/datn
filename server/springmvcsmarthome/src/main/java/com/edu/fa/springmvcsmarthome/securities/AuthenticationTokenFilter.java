@@ -35,7 +35,7 @@ import com.edu.fa.springmvcsmarthome.entities.UserAccount;
 import com.edu.fa.springmvcsmarthome.services.AuthenticationToken;
 import com.edu.fa.springmvcsmarthome.services.UserAccountService;
 import com.edu.fa.springmvcsmarthome.utils.AuthenticationTokenUtil;
-import com.edu.fa.springmvcsmarthome.utils.Constant;
+import com.edu.fa.springmvcsmarthome.utils.Constants;
 
 public class AuthenticationTokenFilter
     extends UsernamePasswordAuthenticationFilter {
@@ -58,9 +58,7 @@ public class AuthenticationTokenFilter
       FilterChain chain) throws IOException, ServletException {
     // TODO Auto-generated method stub
     HttpServletRequest httpServletRequest = (HttpServletRequest) req;
-    String authToken = httpServletRequest.getHeader(Constant.TOKEN_HEADER);
-    System.out.println(authenticationTokenUtil);
-    System.out.println(authToken);
+    String authToken = httpServletRequest.getHeader(Constants.TOKEN_HEADER);
     if (authenticationTokenUtil.isTokenExpired(authToken)) {
       String username = authenticationToken.getUsernameFromToken(authToken);
       Optional<UserAccount> optional = userAccountService

@@ -11,7 +11,7 @@ package com.edu.fa.springmvcsmarthome.utils;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Constant {
+public class Constants {
   public static final String LED_SEQ_KEY = "led";
   public static final String TEMP_SEQ_KEY = "temperature";
   public static final String HUMI_SEQ_KEY = "Humidity";

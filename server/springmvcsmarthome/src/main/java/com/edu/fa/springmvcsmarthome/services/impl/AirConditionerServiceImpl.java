@@ -32,7 +32,7 @@ public class AirConditionerServiceImpl implements AirConditionerService {
    */
   @Override
   @Transactional
-  public boolean save(AirConditioner airConditioner) {
+  public boolean save(final AirConditioner airConditioner) {
     // TODO Auto-generated method stub
     return airConditionerRepository.save(airConditioner) != null;
   }

@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 
 import com.edu.fa.springmvcsmarthome.services.AuthenticationToken;
 import com.edu.fa.springmvcsmarthome.utils.AuthenticationTokenUtil;
-import com.edu.fa.springmvcsmarthome.utils.Constant;
+import com.edu.fa.springmvcsmarthome.utils.Constants;
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.JWSAlgorithm;
 import com.nimbusds.jose.JWSHeader;
@@ -81,7 +81,7 @@ public class AuthenticationTokenImpl implements AuthenticationToken {
 
     JWTClaimsSet claims = authenticationTokenUtil.getClaimsFromToken(token);
     try {
-      username = claims.getStringClaim(Constant.USERNAME);
+      username = claims.getStringClaim(Constants.USERNAME);
     } catch (ParseException e) {
       // TODO Auto-generated catch block
       LOGGER.error(e.getMessage(), e);

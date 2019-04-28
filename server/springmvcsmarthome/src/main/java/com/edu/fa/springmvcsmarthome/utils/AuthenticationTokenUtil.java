@@ -41,7 +41,7 @@ public class AuthenticationTokenUtil {
   }
 
   public Date generateExpirationDate() {
-    return new Date(System.currentTimeMillis() + Constant.EXPIRE_TIME);
+    return new Date(System.currentTimeMillis() + Constants.EXPIRE_TIME);
   }
 
   public Date getExpirationDateFromToken(String token) {
@@ -54,7 +54,7 @@ public class AuthenticationTokenUtil {
   public byte[] generateShareSecret() {
     // Generate 256-bit (32-byte) shared secret
     byte[] sharedSecret = new byte[32];
-    sharedSecret = Constant.SECRET_KEY.getBytes();
+    sharedSecret = Constants.SECRET_KEY.getBytes();
     return sharedSecret;
   }
 

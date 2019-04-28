@@ -31,7 +31,6 @@ public final class ApiAuthenticationEntryPoint implements AuthenticationEntryPoi
   public void commence(HttpServletRequest request, HttpServletResponse response,
       AuthenticationException authException) throws IOException, ServletException {
     // TODO Auto-generated method stub
-    System.out.println("vao");
     response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
     response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
     response.getWriter().write("Unauthorized" + authException.getMessage());

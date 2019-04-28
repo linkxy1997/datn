@@ -17,19 +17,21 @@ import org.springframework.context.annotation.Configuration;
 @Aspect
 @Configuration
 public class LoggingAspect {
-  /**
-   * This function TODO logging BeforeGetCurrentLedStt method.
-   *
-   * @param joinPoint is BeforeGetCurrentLedStt
-   */
   private static final Logger LOGGER = LoggerFactory
       .getLogger(LoggingAspect.class);
 
+  /**
+   * This function TODO logging BeforeGetCurrentLedStt method.
+   *
+   * @param joinPoint is BeforeGetCurrentLedStt.
+   */
   @Before("execution(* com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl."
       + "getCurrentLedStt(..))")
   public void logBeforeGetCurrentLedStt(JoinPoint joinPoint) {
-    LOGGER.info("****LoggingAspect.logGetCurrentLedStt() : "
-        + joinPoint.toLongString());
+    if (LOGGER.isInfoEnabled()) {
+      LOGGER.info("****LoggingAspect.logGetCurrentLedStt() : "
+          + joinPoint.toLongString());
+    }
   }
 
   /**
@@ -39,7 +41,9 @@ public class LoggingAspect {
    */
   @Before("execution(* com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.save(..))")
   public void logBeforeSaveLed(JoinPoint joinPoint) {
-    LOGGER.info("****LoggingAspect.logBeforeSaveLed() : "
-        + joinPoint.getSignature().getName());
+    if (LOGGER.isInfoEnabled()) {
+      LOGGER.info("****LoggingAspect.logBeforeSaveLed() : "
+          + joinPoint.getSignature().getName());
+    }
   }
 }

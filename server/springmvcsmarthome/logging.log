@@ -268,3 +268,83 @@
 2019-Apr-28 20:49:42.783 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
 2019-Apr-28 20:49:43.604 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
 2019-Apr-28 20:49:43.612 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-Apr-28 23:07:59.324 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - Starting SpringmvcsmarthomeApplication on DESKTOP-0MA7SCF with PID 9764 (C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes started by linkx in C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome)
+2019-Apr-28 23:07:59.331 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - No active profile set, falling back to default profiles: default
+2019-Apr-28 23:07:59.460 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-Apr-28 23:07:59.460 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-Apr-28 23:08:01.163 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-Apr-28 23:08:01.181 DEBUG [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for repositories in packages com.edu.fa.springmvcsmarthome.repositories.
+2019-Apr-28 23:08:01.199 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\AirConditionerRepository.class]
+2019-Apr-28 23:08:01.200 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\AutomationStateRepository.class]
+2019-Apr-28 23:08:01.203 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\HumidityRepository.class]
+2019-Apr-28 23:08:01.203 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\LedRepository.class]
+2019-Apr-28 23:08:01.204 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\LightDependentResistorRepository.class]
+2019-Apr-28 23:08:01.204 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\RainWaterSensorRepostitory.class]
+2019-Apr-28 23:08:01.205 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\SequenceRepository.class]
+2019-Apr-28 23:08:01.206 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\TemperatureRepository.class]
+2019-Apr-28 23:08:01.207 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\UserAccountRepository.class]
+2019-Apr-28 23:08:01.372 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 189ms. Found 9 repository interfaces.
+2019-Apr-28 23:08:03.000 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-Apr-28 23:08:03.045 INFO  [restartedMain] o.a.c.c.StandardService - Starting service [Tomcat]
+2019-Apr-28 23:08:03.047 INFO  [restartedMain] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-Apr-28 23:08:03.059 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - An older version [1.2.19] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-Apr-28 23:08:03.061 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-Apr-28 23:08:03.061 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-Apr-28 23:08:03.061 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-Apr-28 23:08:03.083 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-Apr-28 23:08:04.239 INFO  [restartedMain] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2019-Apr-28 23:08:04.241 INFO  [restartedMain] o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 4780 ms
+2019-Apr-28 23:08:07.019 INFO  [restartedMain] o.m.d.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-Apr-28 23:08:07.504 INFO  [cluster-ClusterId{value='5cc5cfe63d7cfb3776073899', description='null'}-127.0.0.1:27017] o.m.d.connection - Opened connection [connectionId{localValue:1, serverValue:11014}] to 127.0.0.1:27017
+2019-Apr-28 23:08:07.515 INFO  [cluster-ClusterId{value='5cc5cfe63d7cfb3776073899', description='null'}-127.0.0.1:27017] o.m.d.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 6]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5928400}
+2019-Apr-28 23:08:08.144 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.AirConditionerRepository…
+2019-Apr-28 23:08:08.625 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-Apr-28 23:08:08.628 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.AirConditioner for index information.
+2019-Apr-28 23:08:08.913 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.AirConditionerRepository.
+2019-Apr-28 23:08:08.955 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.SequenceRepository…
+2019-Apr-28 23:08:09.017 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Sequence for index information.
+2019-Apr-28 23:08:09.076 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.SequenceRepository.
+2019-Apr-28 23:08:09.265 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.UserAccountRepository…
+2019-Apr-28 23:08:09.424 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Role for index information.
+2019-Apr-28 23:08:09.431 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.UserAccount for index information.
+2019-Apr-28 23:08:09.527 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.UserAccountRepository.
+2019-Apr-28 23:08:09.669 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.AutomationStateRepository…
+2019-Apr-28 23:08:09.679 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.AutomationState for index information.
+2019-Apr-28 23:08:09.829 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.AutomationStateRepository.
+2019-Apr-28 23:08:09.851 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.LedRepository…
+2019-Apr-28 23:08:09.919 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Led for index information.
+2019-Apr-28 23:08:09.953 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.LedRepository.
+2019-Apr-28 23:08:10.312 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.HumidityRepository…
+2019-Apr-28 23:08:10.330 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Humidity for index information.
+2019-Apr-28 23:08:10.354 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.HumidityRepository.
+2019-Apr-28 23:08:10.437 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.LightDependentResistorRepository…
+2019-Apr-28 23:08:10.585 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor for index information.
+2019-Apr-28 23:08:10.594 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.LightDependentResistorRepository.
+2019-Apr-28 23:08:10.723 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.RainWaterSensorRepostitory…
+2019-Apr-28 23:08:10.732 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor for index information.
+2019-Apr-28 23:08:11.024 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.RainWaterSensorRepostitory.
+2019-Apr-28 23:08:11.037 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.TemperatureRepository…
+2019-Apr-28 23:08:11.132 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Temperature for index information.
+2019-Apr-28 23:08:11.209 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.TemperatureRepository.
+2019-Apr-28 23:08:12.075 INFO  [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-Apr-28 23:08:12.868 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-Apr-28 23:08:12.877 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - Started SpringmvcsmarthomeApplication in 14.243 seconds (JVM running for 27.533)
+2019-Apr-28 23:08:28.429 INFO  [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-Apr-28 23:08:28.430 INFO  [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-Apr-28 23:08:28.443 INFO  [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet - Completed initialization in 12 ms
+2019-Apr-28 23:08:28.493 INFO  [http-nio-8080-exec-6] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
+2019-Apr-28 23:08:28.559 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
+2019-Apr-28 23:08:28.571 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
+2019-Apr-28 23:08:28.678 INFO  [http-nio-8080-exec-6] o.m.d.connection - Opened connection [connectionId{localValue:2, serverValue:11015}] to 127.0.0.1:27017
+2019-Apr-28 23:08:28.753 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
+2019-Apr-28 23:08:28.754 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
+2019-Apr-28 23:08:28.775 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
+2019-Apr-28 23:08:28.776 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
+2019-Apr-28 23:08:28.790 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
+2019-Apr-28 23:08:28.791 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
+2019-Apr-28 23:08:28.804 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
+2019-Apr-28 23:08:28.805 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
+2019-Apr-28 23:08:28.819 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
+2019-Apr-28 23:08:28.821 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
+2019-Apr-28 23:08:40.856 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-Apr-28 23:08:40.862 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

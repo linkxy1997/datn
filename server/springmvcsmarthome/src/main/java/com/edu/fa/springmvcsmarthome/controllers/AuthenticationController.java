@@ -36,9 +36,10 @@ public class AuthenticationController {
   @RequestMapping(value = "/login", method = RequestMethod.POST)
   public ResponseEntity<String> login(HttpServletRequest request,
       @RequestBody UserAccount userAccount) {
-    String result = "";
-    HttpStatus httpStatus = null;
-    Optional<UserAccount> optional = userAccountService.findByUsername(userAccount.getUsername());
+    String result;
+    HttpStatus httpStatus;
+    Optional<UserAccount> optional = userAccountService
+        .findByUsername(userAccount.getUsername());
     if (optional.isPresent()) {
       UserAccount account = optional.get();
       result = authenticationToken.generateTokenLogin(account.getUsername());

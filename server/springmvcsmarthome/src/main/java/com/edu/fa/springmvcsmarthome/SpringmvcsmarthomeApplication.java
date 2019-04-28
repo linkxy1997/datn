@@ -6,17 +6,26 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+/**
+ * 
+ * @author linkx
+ *
+ */
 @SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
 public class SpringmvcsmarthomeApplication
     extends SpringBootServletInitializer {
-
+  /**
+   * TODO entrypoint of system.
+   * 
+   * @param args String arrays.
+   */
   public static void main(String[] args) {
     SpringApplication.run(SpringmvcsmarthomeApplication.class, args);
   }
 
   @Override
   protected SpringApplicationBuilder configure(
-      SpringApplicationBuilder builder) {
+      final SpringApplicationBuilder builder) {
     // TODO Auto-generated method stub
     return builder.sources(SpringmvcsmarthomeApplication.class);
   }
