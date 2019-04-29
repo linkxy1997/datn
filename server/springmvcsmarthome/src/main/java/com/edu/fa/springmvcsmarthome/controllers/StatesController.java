@@ -109,7 +109,7 @@ public class StatesController {
    * @param states
    * @return
    */
-  @RequestMapping(value = "setStates", method = RequestMethod.POST, produces = {
+  @RequestMapping(value = "/setStates", method = RequestMethod.POST, produces = {
       MediaType.APPLICATION_JSON_VALUE })
   public ResponseEntity<States> setStates(@RequestBody States states) {
     Date timeChange = new Date();
