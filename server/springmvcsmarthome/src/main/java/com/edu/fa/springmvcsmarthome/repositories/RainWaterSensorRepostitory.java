@@ -13,7 +13,13 @@ import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.edu.fa.springmvcsmarthome.entities.RainWaterSensor;
-
-public interface RainWaterSensorRepostitory extends MongoRepository<RainWaterSensor, Integer> {
-  public abstract Optional<RainWaterSensor> findTopByOrderByRainIdDesc();
+/**
+ * Extension of {@link MongoRepository} to provide additional methods to
+ * retrieve entities using the pagination and sorting abstraction.
+ * 
+ * @author linkx
+ */
+public interface RainWaterSensorRepostitory
+    extends MongoRepository<RainWaterSensor, Integer> {
+  Optional<RainWaterSensor> findTopByOrderByRainIdDesc();
 }

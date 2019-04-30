@@ -20,6 +20,12 @@ public class Constants {
   public static final String AIR_CONDITIONER = "AirConditioner";
   public static final String USERNAME = "username";
   public static final String SECRET_KEY = "11111111111111111111111111111111";
-  public static final int EXPIRE_TIME = 86400000;
-  public final static String TOKEN_HEADER = "authorization";
+  public static final long EXPIRE_TIME = 86400000;
+  public final static String TOKEN_HEADER = "Authorization";
+  public static final int YEAR = 2021;
+  public static final int MONTH = 12;
+  public static final int DAYOFMONTH = 31;
+  public static final int HOUROFDAY = 23;
+  public static final int MINUTE = 59;
+  public static final int SECOND = 59;
 }

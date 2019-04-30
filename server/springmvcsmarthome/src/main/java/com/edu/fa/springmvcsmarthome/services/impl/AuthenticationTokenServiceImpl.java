@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.edu.fa.springmvcsmarthome.services.AuthenticationToken;
+import com.edu.fa.springmvcsmarthome.services.AuthenticationTokenService;
 import com.edu.fa.springmvcsmarthome.utils.AuthenticationTokenUtil;
 import com.edu.fa.springmvcsmarthome.utils.Constants;
 import com.nimbusds.jose.JOSEException;
@@ -27,11 +27,12 @@ import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
 
 @Service
-public class AuthenticationTokenImpl implements AuthenticationToken {
+public class AuthenticationTokenServiceImpl
+    implements AuthenticationTokenService {
   @Autowired
   private AuthenticationTokenUtil authenticationTokenUtil;
   private static final Logger LOGGER = LoggerFactory
-      .getLogger(AuthenticationTokenImpl.class);
+      .getLogger(AuthenticationTokenServiceImpl.class);
 
   @Override
   public String generateTokenLogin(String username) {
@@ -42,8 +43,12 @@ public class AuthenticationTokenImpl implements AuthenticationToken {
       JWSSigner signer = new MACSigner(
           authenticationTokenUtil.generateShareSecret());
       JWTClaimsSet.Builder builder = new JWTClaimsSet.Builder();
+      builder.claim(Constants.USERNAME, username);
+//      builder.expirationTime(
+//          authenticationTokenUtil.generateExpirationDateForWemosD1R2());
       builder.expirationTime(authenticationTokenUtil.generateExpirationDate());
       JWTClaimsSet claimsSet = builder.build();
+
       JWSHeader jwsHeader = new JWSHeader(JWSAlgorithm.HS256);
       SignedJWT signedJWT = new SignedJWT(jwsHeader, claimsSet);
       // TODO Apply the HMAC protection
@@ -53,18 +58,19 @@ public class AuthenticationTokenImpl implements AuthenticationToken {
       token = signedJWT.serialize();
     } catch (JOSEException e) {
       // TODO Auto-generated catch block
-      LOGGER.error(e.getMessage(), e);
+      e.printStackTrace();
     }
     return token;
   }
 
   @Override
-  public boolean validateTokenLogin(String token) {
+  public boolean validateTokenLogin(String token) throws ParseException {
     // TODO Auto-generated method stub
     if (token == null || token.trim().length() == 0) {
       return false;
     }
     String username = getUsernameFromToken(token);
+
     if (username == null || username.isEmpty()) {
       return false;
     }
@@ -75,18 +81,12 @@ public class AuthenticationTokenImpl implements AuthenticationToken {
   }
 
   @Override
-  public String getUsernameFromToken(String token) {
+  public String getUsernameFromToken(String token)
+      throws ParseException, NullPointerException {
     // TODO Auto-generated method stub
     String username = null;
-
     JWTClaimsSet claims = authenticationTokenUtil.getClaimsFromToken(token);
-    try {
-      username = claims.getStringClaim(Constants.USERNAME);
-    } catch (ParseException e) {
-      // TODO Auto-generated catch block
-      LOGGER.error(e.getMessage(), e);
-    }
-
+    username = claims.getStringClaim(Constants.USERNAME);
     return username;
   }
 

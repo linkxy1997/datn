@@ -12,11 +12,12 @@ export class AirConditionerService {
 
   constructor(private httpClient: HttpClient) { }
 
-  private airUrl = Constant.apiUrl + '/air/postAirStatus';
+  private airUrl = Constant.API_URL + '/air/postAirStatus';
 
   public httpOptions():HttpHeaders {
     let headers = new HttpHeaders({
-      'Content-Type': 'application/json;charset=UTF-8'
+      'Content-Type': 'application/json;charset=UTF-8',
+      
     })
     return headers;
   }

@@ -10,11 +10,14 @@ import { Constant } from '../entities/constant';
   providedIn: 'root'
 })
 export class AutomationStateService {
-  url: string = Constant.apiUrl + '/automation';
+  url: string = Constant.API_URL + '/automation';
   constructor(private httpClient: HttpClient) { }
   private httpOptions() {
+    let token = localStorage.getItem('AuthenticationToken');
+    const au=token.split('"');
     let headers = new HttpHeaders({
-      'Content-Type': 'application/json;charset=UTF-8'
+      'Content-Type': 'application/json;charset=UTF-8',
+      'Authorization':token
     })
     return headers;
   }
@@ -27,6 +30,11 @@ export class AutomationStateService {
   }
   getAutomationState(): Observable<HttpResponse<AutomationState>> {
     return this.httpClient.get<AutomationState>(
-      `${this.url}/getState`, { observe: 'response' });
+      `${this.url}/getState`, 
+      { 
+        observe: 'response',
+        headers:this.httpOptions()
+      }
+      );
   }
 }

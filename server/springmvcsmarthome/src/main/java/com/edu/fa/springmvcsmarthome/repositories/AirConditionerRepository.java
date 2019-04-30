@@ -14,6 +14,19 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.edu.fa.springmvcsmarthome.entities.AirConditioner;
 
-public interface AirConditionerRepository extends MongoRepository<AirConditioner, Integer> {
-  public abstract Optional<AirConditioner> findTopByOrderByIdDesc();
+/**
+ * Extension of {@link MongoRepository} to provide additional methods to
+ * retrieve entities using the pagination and sorting abstraction.
+ * 
+ * @author linkx
+ *
+ */
+public interface AirConditionerRepository
+    extends MongoRepository<AirConditioner, Integer> {
+  /**
+   * TODO FindTopByOrderByIdDesc.
+   * 
+   * @return {@link Optional} AirConditioner.
+   */
+  Optional<AirConditioner> findTopByOrderByIdDesc();
 }

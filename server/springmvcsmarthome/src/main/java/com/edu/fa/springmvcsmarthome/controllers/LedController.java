@@ -22,7 +22,7 @@ import com.edu.fa.springmvcsmarthome.utils.Constants;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/led")
+@RequestMapping(value = "/api/led")
 public class LedController {
   @Autowired
   private LedService ledService;

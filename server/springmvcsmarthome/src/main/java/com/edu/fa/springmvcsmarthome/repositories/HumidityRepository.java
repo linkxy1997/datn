@@ -14,6 +14,17 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.edu.fa.springmvcsmarthome.entities.Humidity;
 
+/**
+ * Extension of {@link MongoRepository} to provide additional methods to
+ * retrieve entities using the pagination and sorting abstraction.
+ * 
+ * @author linkx
+ */
 public interface HumidityRepository extends MongoRepository<Humidity, Integer> {
-  public abstract Optional<Humidity> findTopByOrderByHumidityIdDesc();
+  /**
+   * TODO FindTopByOrderByHumidityIdDesc.
+   * 
+   * @return {@link Optional} Humidity.
+   */
+  Optional<Humidity> findTopByOrderByHumidityIdDesc();
 }

@@ -15,6 +15,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -39,9 +40,12 @@ public class UserAccount implements Serializable {
   private String username;
   @Field(value = "Password")
   private String password;
-  @DBRef(lazy = true)
+  @DBRef(lazy = false)
   @Field(value = "Role")
   private List<Role> roles;
+
+  @Transient
+  private String authenticationToken;
 
   /*
    * (non-Javadoc)
@@ -98,4 +102,13 @@ public class UserAccount implements Serializable {
   public void setRoles(List<Role> roles) {
     this.roles = roles;
   }
+
+  public String getAuthenticationToken() {
+    return authenticationToken;
+  }
+
+  public void setAuthenticationToken(String authenticationToken) {
+    this.authenticationToken = authenticationToken;
+  }
+
 }

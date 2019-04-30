@@ -37,9 +37,14 @@ import com.edu.fa.springmvcsmarthome.services.SequenceService;
 import com.edu.fa.springmvcsmarthome.services.TemperatureService;
 import com.edu.fa.springmvcsmarthome.utils.Constants;
 
+/**
+ * 
+ * @author linkx
+ * 
+ */
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/states")
+@RequestMapping(value = "/api/states")
 public class StatesController {
   @Autowired
   private HumidityService humidityService;
@@ -57,9 +62,9 @@ public class StatesController {
   private AirConditionerService airConditionerService;
 
   /**
-   * TODO
+   * TODO Send States to Wemos D1 R2.
    * 
-   * @return
+   * @return ResponseEntity HttpStatus.OK if Wemos D1 R2 GET complete.
    */
   @RequestMapping(value = "getStates", method = RequestMethod.GET, produces = {
       MediaType.APPLICATION_JSON_VALUE })
@@ -104,10 +109,11 @@ public class StatesController {
   }
 
   /**
-   * TODO
+   * TODO Receive States from Wemos D1 R2.
    * 
-   * @param states
-   * @return
+   * @param states: Humidity,Temperature,RainSensor,LightSensor.
+   * @return ResponseEntity: HttpStatus.OK if set true.
+   * @throws MongoExceptionTranslator.
    */
   @RequestMapping(value = "/setStates", method = RequestMethod.POST, produces = {
       MediaType.APPLICATION_JSON_VALUE })

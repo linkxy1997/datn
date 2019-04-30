@@ -14,7 +14,18 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.edu.fa.springmvcsmarthome.entities.LightDependentResistor;
 
+/**
+ * Extension of {@link MongoRepository} to provide additional methods to
+ * retrieve entities using the pagination and sorting abstraction.
+ * 
+ * @author linkx
+ */
 public interface LightDependentResistorRepository
     extends MongoRepository<LightDependentResistor, Integer> {
-  public abstract Optional<LightDependentResistor> findTopByOrderByIdDesc();
+  /**
+   * TODO FindTopByOrderByIdDesc
+   * 
+   * @return {@link Optional} LightDependentResistor.
+   */
+  Optional<LightDependentResistor> findTopByOrderByIdDesc();
 }

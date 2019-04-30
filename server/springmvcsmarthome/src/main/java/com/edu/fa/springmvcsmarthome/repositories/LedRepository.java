@@ -9,10 +9,10 @@ import org.springframework.stereotype.Repository;
 import com.edu.fa.springmvcsmarthome.entities.Led;
 
 /**
- * This class.
- *
+ * Extension of {@link MongoRepository} to provide additional methods to
+ * retrieve entities using the pagination and sorting abstraction.
+ * 
  * @author linkx
- *
  */
 @Repository
 public interface LedRepository extends MongoRepository<Led, Integer> {
@@ -21,5 +21,5 @@ public interface LedRepository extends MongoRepository<Led, Integer> {
    *
    * @return
    */
-  public abstract Optional<Led> findTopByOrderByLedIdDesc();
+  Optional<Led> findTopByOrderByLedIdDesc();
 }

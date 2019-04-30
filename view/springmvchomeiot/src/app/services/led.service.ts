@@ -9,7 +9,7 @@ import { Constant } from '../entities/constant';
   providedIn: 'root'
 })
 export class LedService {
-  apiURL: string = Constant.apiUrl + '/led';
+  apiURL: string = Constant.API_URL + '/led';
   constructor(private httpClient: HttpClient) { }
   private httpOptions() {
     let headers = new HttpHeaders({

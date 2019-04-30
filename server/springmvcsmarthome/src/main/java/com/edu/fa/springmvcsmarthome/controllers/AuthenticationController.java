@@ -8,51 +8,54 @@
 
 package com.edu.fa.springmvcsmarthome.controllers;
 
-import java.util.Optional;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.edu.fa.springmvcsmarthome.dto.AuthenticationToken;
 import com.edu.fa.springmvcsmarthome.entities.UserAccount;
-import com.edu.fa.springmvcsmarthome.services.AuthenticationToken;
+import com.edu.fa.springmvcsmarthome.services.AuthenticationTokenService;
 import com.edu.fa.springmvcsmarthome.services.UserAccountService;
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/api")
 public class AuthenticationController {
   @Autowired
   private UserAccountService userAccountService;
   @Autowired
-  private AuthenticationToken authenticationToken;
+  private AuthenticationTokenService authenticationTokenService;
 
   @RequestMapping(value = "/login", method = RequestMethod.POST)
-  public ResponseEntity<String> login(HttpServletRequest request,
+  public ResponseEntity<AuthenticationToken> login(HttpServletRequest request,
       @RequestBody UserAccount userAccount) {
     String result;
     HttpStatus httpStatus;
-    Optional<UserAccount> optional = userAccountService
-        .findByUsername(userAccount.getUsername());
-    if (optional.isPresent()) {
-      UserAccount account = optional.get();
-      result = authenticationToken.generateTokenLogin(account.getUsername());
+    boolean flag = userAccountService.findByUsername(userAccount);
+    if (flag) {
+      result = authenticationTokenService
+          .generateTokenLogin(userAccount.getUsername());
       httpStatus = HttpStatus.OK;
     } else {
       result = "Wrong username and password";
       httpStatus = HttpStatus.BAD_REQUEST;
     }
-    return new ResponseEntity<>(result, httpStatus);
+    AuthenticationToken authenticationToken = new AuthenticationToken(result);
+    return new ResponseEntity<AuthenticationToken>(authenticationToken,
+        httpStatus);
   }
 
-  @GetMapping(value = "/hello")
-  public String welcome() {
-    return "Hello";
+  @GetMapping(value = "/hello", produces = MediaType.APPLICATION_JSON_VALUE)
+  public ResponseEntity<String> welcome() {
+    return new ResponseEntity<String>("Welcome", HttpStatus.OK);
   }
 }

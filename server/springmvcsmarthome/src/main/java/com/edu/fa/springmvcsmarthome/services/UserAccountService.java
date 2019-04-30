@@ -14,4 +14,6 @@ import com.edu.fa.springmvcsmarthome.entities.UserAccount;
 
 public interface UserAccountService {
   public Optional<UserAccount> findByUsername(String username);
+
+  boolean findByUsername(UserAccount userAccount);
 }

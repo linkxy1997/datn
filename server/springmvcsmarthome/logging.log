@@ -1,350 +1,67 @@
-2019-Apr-28 20:49:04.619 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - Starting SpringmvcsmarthomeApplication on DESKTOP-0MA7SCF with PID 13392 (C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes started by linkx in C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome)
-2019-Apr-28 20:49:04.625 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - No active profile set, falling back to default profiles: default
-2019-Apr-28 20:49:04.704 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-Apr-28 20:49:04.705 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-Apr-28 20:49:05.748 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-Apr-28 20:49:05.764 DEBUG [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for repositories in packages com.edu.fa.springmvcsmarthome.repositories.
-2019-Apr-28 20:49:05.781 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\AirConditionerRepository.class]
-2019-Apr-28 20:49:05.782 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\AutomationStateRepository.class]
-2019-Apr-28 20:49:05.785 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\HumidityRepository.class]
-2019-Apr-28 20:49:05.786 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\LedRepository.class]
-2019-Apr-28 20:49:05.787 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\LightDependentResistorRepository.class]
-2019-Apr-28 20:49:05.787 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\RainWaterSensorRepostitory.class]
-2019-Apr-28 20:49:05.788 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\SequenceRepository.class]
-2019-Apr-28 20:49:05.789 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\TemperatureRepository.class]
-2019-Apr-28 20:49:05.790 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\UserAccountRepository.class]
-2019-Apr-28 20:49:05.941 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 177ms. Found 9 repository interfaces.
-2019-Apr-28 20:49:07.351 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-Apr-28 20:49:07.391 INFO  [restartedMain] o.a.c.c.StandardService - Starting service [Tomcat]
-2019-Apr-28 20:49:07.392 INFO  [restartedMain] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.19]
-2019-Apr-28 20:49:08.527 INFO  [restartedMain] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-2019-Apr-28 20:49:08.529 INFO  [restartedMain] o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 3824 ms
-2019-Apr-28 20:49:09.971 INFO  [restartedMain] o.m.d.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2019-Apr-28 20:49:10.071 INFO  [cluster-ClusterId{value='5cc5af55d1661279a98011e9', description='null'}-127.0.0.1:27017] o.m.d.connection - Opened connection [connectionId{localValue:1, serverValue:11010}] to 127.0.0.1:27017
-2019-Apr-28 20:49:10.226 INFO  [cluster-ClusterId{value='5cc5af55d1661279a98011e9', description='null'}-127.0.0.1:27017] o.m.d.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 6]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=149978400}
-2019-Apr-28 20:49:10.467 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.AirConditionerRepository…
-2019-Apr-28 20:49:10.619 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-Apr-28 20:49:10.624 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.AirConditioner for index information.
-2019-Apr-28 20:49:10.751 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.AirConditionerRepository.
-2019-Apr-28 20:49:10.764 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.SequenceRepository…
-2019-Apr-28 20:49:10.769 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Sequence for index information.
-2019-Apr-28 20:49:10.774 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.SequenceRepository.
-2019-Apr-28 20:49:10.808 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.UserAccountRepository…
-2019-Apr-28 20:49:10.837 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Role for index information.
-2019-Apr-28 20:49:10.839 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.UserAccount for index information.
-2019-Apr-28 20:49:10.859 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.UserAccountRepository.
-2019-Apr-28 20:49:10.875 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.AutomationStateRepository…
-2019-Apr-28 20:49:10.884 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.AutomationState for index information.
-2019-Apr-28 20:49:10.891 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.AutomationStateRepository.
-2019-Apr-28 20:49:10.901 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.LedRepository…
-2019-Apr-28 20:49:10.913 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Led for index information.
-2019-Apr-28 20:49:10.927 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.LedRepository.
-2019-Apr-28 20:49:10.976 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.HumidityRepository…
-2019-Apr-28 20:49:10.982 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Humidity for index information.
-2019-Apr-28 20:49:10.988 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.HumidityRepository.
-2019-Apr-28 20:49:10.994 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.LightDependentResistorRepository…
-2019-Apr-28 20:49:11.002 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor for index information.
-2019-Apr-28 20:49:11.009 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.LightDependentResistorRepository.
-2019-Apr-28 20:49:11.015 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.RainWaterSensorRepostitory…
-2019-Apr-28 20:49:11.022 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor for index information.
-2019-Apr-28 20:49:11.028 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.RainWaterSensorRepostitory.
-2019-Apr-28 20:49:11.034 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.TemperatureRepository…
-2019-Apr-28 20:49:11.039 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Temperature for index information.
-2019-Apr-28 20:49:11.044 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.TemperatureRepository.
-2019-Apr-28 20:49:11.353 INFO  [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-Apr-28 20:49:11.705 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-Apr-28 20:49:11.709 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - Started SpringmvcsmarthomeApplication in 7.753 seconds (JVM running for 10.297)
-2019-Apr-28 20:49:12.822 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-Apr-28 20:49:12.823 INFO  [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-Apr-28 20:49:12.834 INFO  [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 10 ms
-2019-Apr-28 20:49:12.893 INFO  [http-nio-8080-exec-1] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:12.936 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:12.944 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:13.027 INFO  [http-nio-8080-exec-1] o.m.d.connection - Opened connection [connectionId{localValue:2, serverValue:11011}] to 127.0.0.1:27017
-2019-Apr-28 20:49:13.140 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:13.194 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:13.215 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:13.216 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:13.229 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:13.230 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:13.241 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:13.242 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:13.255 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:13.262 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:14.760 INFO  [http-nio-8080-exec-2] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:14.766 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:14.767 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:14.779 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:14.781 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:14.786 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:14.786 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:14.793 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:14.793 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:14.798 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:14.798 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:14.803 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:14.804 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:16.756 INFO  [http-nio-8080-exec-3] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:16.761 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:16.766 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:16.773 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:16.774 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:16.780 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:16.782 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:16.787 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:16.788 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:16.793 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:16.796 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:16.801 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:16.802 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:17.791 INFO  [http-nio-8080-exec-5] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:17.793 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:17.794 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:17.797 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:17.797 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:17.802 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:17.803 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:17.805 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:17.806 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:17.808 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:17.809 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:17.811 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:17.811 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:19.791 INFO  [http-nio-8080-exec-6] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:19.794 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:19.795 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:19.798 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:19.801 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:19.804 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:19.805 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:19.809 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:19.811 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:19.814 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:19.815 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:19.818 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:19.818 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:21.790 INFO  [http-nio-8080-exec-7] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:21.792 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:21.793 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:21.797 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:21.798 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:21.801 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:21.802 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:21.805 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:21.805 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:21.808 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:21.808 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:21.812 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:21.812 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:23.790 INFO  [http-nio-8080-exec-8] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:23.793 DEBUG [http-nio-8080-exec-8] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:23.796 DEBUG [http-nio-8080-exec-8] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:23.799 DEBUG [http-nio-8080-exec-8] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:23.799 DEBUG [http-nio-8080-exec-8] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:23.802 DEBUG [http-nio-8080-exec-8] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:23.804 DEBUG [http-nio-8080-exec-8] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:23.806 DEBUG [http-nio-8080-exec-8] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:23.807 DEBUG [http-nio-8080-exec-8] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:23.809 DEBUG [http-nio-8080-exec-8] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:23.809 DEBUG [http-nio-8080-exec-8] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:23.812 DEBUG [http-nio-8080-exec-8] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:23.812 DEBUG [http-nio-8080-exec-8] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:25.791 INFO  [http-nio-8080-exec-9] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:25.793 DEBUG [http-nio-8080-exec-9] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:25.794 DEBUG [http-nio-8080-exec-9] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:25.796 DEBUG [http-nio-8080-exec-9] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:25.797 DEBUG [http-nio-8080-exec-9] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:25.800 DEBUG [http-nio-8080-exec-9] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:25.801 DEBUG [http-nio-8080-exec-9] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:25.805 DEBUG [http-nio-8080-exec-9] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:25.805 DEBUG [http-nio-8080-exec-9] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:25.809 DEBUG [http-nio-8080-exec-9] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:25.810 DEBUG [http-nio-8080-exec-9] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:25.812 DEBUG [http-nio-8080-exec-9] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:25.813 DEBUG [http-nio-8080-exec-9] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:27.795 INFO  [http-nio-8080-exec-10] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:27.798 DEBUG [http-nio-8080-exec-10] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:27.799 DEBUG [http-nio-8080-exec-10] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:27.803 DEBUG [http-nio-8080-exec-10] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:27.806 DEBUG [http-nio-8080-exec-10] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:27.811 DEBUG [http-nio-8080-exec-10] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:27.811 DEBUG [http-nio-8080-exec-10] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:27.816 DEBUG [http-nio-8080-exec-10] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:27.816 DEBUG [http-nio-8080-exec-10] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:27.821 DEBUG [http-nio-8080-exec-10] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:27.822 DEBUG [http-nio-8080-exec-10] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:27.826 DEBUG [http-nio-8080-exec-10] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:27.828 DEBUG [http-nio-8080-exec-10] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:29.795 INFO  [http-nio-8080-exec-1] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:29.801 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:29.802 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:29.812 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:29.813 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:29.817 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:29.817 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:29.821 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:29.821 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:29.823 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:29.823 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:29.826 DEBUG [http-nio-8080-exec-1] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:29.826 DEBUG [http-nio-8080-exec-1] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:32.773 INFO  [http-nio-8080-exec-2] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:32.778 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:32.781 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:32.785 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:32.786 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:32.790 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:32.790 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:32.795 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:32.795 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:32.799 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:32.806 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:32.810 DEBUG [http-nio-8080-exec-2] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:32.810 DEBUG [http-nio-8080-exec-2] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:34.762 INFO  [http-nio-8080-exec-3] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:34.766 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:34.766 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:34.770 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:34.770 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:34.778 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:34.779 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:34.783 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:34.784 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:34.788 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:34.789 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:34.794 DEBUG [http-nio-8080-exec-3] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:34.794 DEBUG [http-nio-8080-exec-3] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:36.757 INFO  [http-nio-8080-exec-4] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:36.760 DEBUG [http-nio-8080-exec-4] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:36.761 DEBUG [http-nio-8080-exec-4] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:36.764 DEBUG [http-nio-8080-exec-4] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:36.766 DEBUG [http-nio-8080-exec-4] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:36.769 DEBUG [http-nio-8080-exec-4] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:36.770 DEBUG [http-nio-8080-exec-4] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:36.773 DEBUG [http-nio-8080-exec-4] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:36.775 DEBUG [http-nio-8080-exec-4] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:36.779 DEBUG [http-nio-8080-exec-4] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:36.779 DEBUG [http-nio-8080-exec-4] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:36.783 DEBUG [http-nio-8080-exec-4] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:36.783 DEBUG [http-nio-8080-exec-4] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:38.760 INFO  [http-nio-8080-exec-5] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:38.764 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:38.764 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:38.772 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:38.772 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:38.776 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:38.777 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:38.782 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:38.783 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:38.785 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:38.785 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:38.789 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:38.789 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:40.757 INFO  [http-nio-8080-exec-6] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:40.760 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:40.763 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:40.766 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:40.766 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:40.770 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:40.773 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:40.777 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:40.777 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:40.781 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:40.781 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:40.785 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:40.785 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:42.756 INFO  [http-nio-8080-exec-7] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 20:49:42.760 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 20:49:42.761 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 20:49:42.765 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 20:49:42.765 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 20:49:42.769 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:42.770 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 20:49:42.774 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 20:49:42.775 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 20:49:42.779 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 20:49:42.779 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 20:49:42.783 DEBUG [http-nio-8080-exec-7] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 20:49:42.783 DEBUG [http-nio-8080-exec-7] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 20:49:43.604 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
-2019-Apr-28 20:49:43.612 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-Apr-28 23:07:59.324 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - Starting SpringmvcsmarthomeApplication on DESKTOP-0MA7SCF with PID 9764 (C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes started by linkx in C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome)
-2019-Apr-28 23:07:59.331 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - No active profile set, falling back to default profiles: default
-2019-Apr-28 23:07:59.460 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-Apr-28 23:07:59.460 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-Apr-28 23:08:01.163 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-Apr-28 23:08:01.181 DEBUG [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for repositories in packages com.edu.fa.springmvcsmarthome.repositories.
-2019-Apr-28 23:08:01.199 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\AirConditionerRepository.class]
-2019-Apr-28 23:08:01.200 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\AutomationStateRepository.class]
-2019-Apr-28 23:08:01.203 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\HumidityRepository.class]
-2019-Apr-28 23:08:01.203 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\LedRepository.class]
-2019-Apr-28 23:08:01.204 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\LightDependentResistorRepository.class]
-2019-Apr-28 23:08:01.204 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\RainWaterSensorRepostitory.class]
-2019-Apr-28 23:08:01.205 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\SequenceRepository.class]
-2019-Apr-28 23:08:01.206 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\TemperatureRepository.class]
-2019-Apr-28 23:08:01.207 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\UserAccountRepository.class]
-2019-Apr-28 23:08:01.372 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 189ms. Found 9 repository interfaces.
-2019-Apr-28 23:08:03.000 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-Apr-28 23:08:03.045 INFO  [restartedMain] o.a.c.c.StandardService - Starting service [Tomcat]
-2019-Apr-28 23:08:03.047 INFO  [restartedMain] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.19]
-2019-Apr-28 23:08:03.059 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - An older version [1.2.19] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
-2019-Apr-28 23:08:03.061 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
-2019-Apr-28 23:08:03.061 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2019-Apr-28 23:08:03.061 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2019-Apr-28 23:08:03.083 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
-2019-Apr-28 23:08:04.239 INFO  [restartedMain] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-2019-Apr-28 23:08:04.241 INFO  [restartedMain] o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 4780 ms
-2019-Apr-28 23:08:07.019 INFO  [restartedMain] o.m.d.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2019-Apr-28 23:08:07.504 INFO  [cluster-ClusterId{value='5cc5cfe63d7cfb3776073899', description='null'}-127.0.0.1:27017] o.m.d.connection - Opened connection [connectionId{localValue:1, serverValue:11014}] to 127.0.0.1:27017
-2019-Apr-28 23:08:07.515 INFO  [cluster-ClusterId{value='5cc5cfe63d7cfb3776073899', description='null'}-127.0.0.1:27017] o.m.d.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 6]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5928400}
-2019-Apr-28 23:08:08.144 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.AirConditionerRepository…
-2019-Apr-28 23:08:08.625 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-Apr-28 23:08:08.628 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.AirConditioner for index information.
-2019-Apr-28 23:08:08.913 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.AirConditionerRepository.
-2019-Apr-28 23:08:08.955 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.SequenceRepository…
-2019-Apr-28 23:08:09.017 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Sequence for index information.
-2019-Apr-28 23:08:09.076 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.SequenceRepository.
-2019-Apr-28 23:08:09.265 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.UserAccountRepository…
-2019-Apr-28 23:08:09.424 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Role for index information.
-2019-Apr-28 23:08:09.431 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.UserAccount for index information.
-2019-Apr-28 23:08:09.527 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.UserAccountRepository.
-2019-Apr-28 23:08:09.669 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.AutomationStateRepository…
-2019-Apr-28 23:08:09.679 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.AutomationState for index information.
-2019-Apr-28 23:08:09.829 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.AutomationStateRepository.
-2019-Apr-28 23:08:09.851 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.LedRepository…
-2019-Apr-28 23:08:09.919 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Led for index information.
-2019-Apr-28 23:08:09.953 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.LedRepository.
-2019-Apr-28 23:08:10.312 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.HumidityRepository…
-2019-Apr-28 23:08:10.330 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Humidity for index information.
-2019-Apr-28 23:08:10.354 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.HumidityRepository.
-2019-Apr-28 23:08:10.437 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.LightDependentResistorRepository…
-2019-Apr-28 23:08:10.585 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor for index information.
-2019-Apr-28 23:08:10.594 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.LightDependentResistorRepository.
-2019-Apr-28 23:08:10.723 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.RainWaterSensorRepostitory…
-2019-Apr-28 23:08:10.732 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor for index information.
-2019-Apr-28 23:08:11.024 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.RainWaterSensorRepostitory.
-2019-Apr-28 23:08:11.037 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.TemperatureRepository…
-2019-Apr-28 23:08:11.132 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Temperature for index information.
-2019-Apr-28 23:08:11.209 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.TemperatureRepository.
-2019-Apr-28 23:08:12.075 INFO  [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-Apr-28 23:08:12.868 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-Apr-28 23:08:12.877 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - Started SpringmvcsmarthomeApplication in 14.243 seconds (JVM running for 27.533)
-2019-Apr-28 23:08:28.429 INFO  [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-Apr-28 23:08:28.430 INFO  [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-Apr-28 23:08:28.443 INFO  [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet - Completed initialization in 12 ms
-2019-Apr-28 23:08:28.493 INFO  [http-nio-8080-exec-6] c.e.f.s.a.LoggingAspect - ****LoggingAspect.logGetCurrentLedStt() : execution(public java.util.Optional com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl.getCurrentLedStt())
-2019-Apr-28 23:08:28.559 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "ledId" : -1}
-2019-Apr-28 23:08:28.571 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Led in collection: Led
-2019-Apr-28 23:08:28.678 INFO  [http-nio-8080-exec-6] o.m.d.connection - Opened connection [connectionId{localValue:2, serverValue:11015}] to 127.0.0.1:27017
-2019-Apr-28 23:08:28.753 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "humidityId" : -1}
-2019-Apr-28 23:08:28.754 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Humidity in collection: Humidity
-2019-Apr-28 23:08:28.775 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 23:08:28.776 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor in collection: LightDependentResistor
-2019-Apr-28 23:08:28.790 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "temperatureId" : -1}
-2019-Apr-28 23:08:28.791 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.Temperature in collection: Temperature
-2019-Apr-28 23:08:28.804 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "rainId" : -1}
-2019-Apr-28 23:08:28.805 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor in collection: RainWaterSensor
-2019-Apr-28 23:08:28.819 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: {}, Fields: {}, Sort: { "id" : -1}
-2019-Apr-28 23:08:28.821 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: {} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.AirConditioner in collection: AirConditioner
-2019-Apr-28 23:08:40.856 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
-2019-Apr-28 23:08:40.862 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-May-01 00:04:55.892 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: { "username" : "admin"}, Fields: {}, Sort: {}
+2019-May-01 00:04:56.098 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: { "Username" : "admin"} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.UserAccount in collection: UserAccount
+2019-May-01 00:04:56.117 DEBUG [http-nio-8080-exec-5] o.s.d.m.r.q.MongoQueryCreator - Created query Query: { "username" : "admin"}, Fields: {}, Sort: {}
+2019-May-01 00:04:56.117 DEBUG [http-nio-8080-exec-5] o.s.d.m.c.MongoTemplate - find using query: { "Username" : "admin"} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.UserAccount in collection: UserAccount
+2019-May-01 00:05:07.305 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: { "username" : "admin"}, Fields: {}, Sort: {}
+2019-May-01 00:05:07.310 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: { "Username" : "admin"} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.UserAccount in collection: UserAccount
+2019-May-01 00:05:07.314 DEBUG [http-nio-8080-exec-6] o.s.d.m.r.q.MongoQueryCreator - Created query Query: { "username" : "admin"}, Fields: {}, Sort: {}
+2019-May-01 00:05:07.314 DEBUG [http-nio-8080-exec-6] o.s.d.m.c.MongoTemplate - find using query: { "Username" : "admin"} fields: Document{{}} for class: class com.edu.fa.springmvcsmarthome.entities.UserAccount in collection: UserAccount
+2019-May-01 00:06:15.840 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - Starting SpringmvcsmarthomeApplication on DESKTOP-0MA7SCF with PID 18688 (C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes started by linkx in C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome)
+2019-May-01 00:06:15.841 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - No active profile set, falling back to default profiles: default
+2019-May-01 00:06:20.860 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-May-01 00:06:20.863 DEBUG [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for repositories in packages com.edu.fa.springmvcsmarthome.repositories.
+2019-May-01 00:06:20.876 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\AirConditionerRepository.class]
+2019-May-01 00:06:20.876 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\AutomationStateRepository.class]
+2019-May-01 00:06:20.877 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\HumidityRepository.class]
+2019-May-01 00:06:20.877 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\LedRepository.class]
+2019-May-01 00:06:20.879 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\LightDependentResistorRepository.class]
+2019-May-01 00:06:20.880 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\RainWaterSensorRepostitory.class]
+2019-May-01 00:06:20.880 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\SequenceRepository.class]
+2019-May-01 00:06:20.881 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\TemperatureRepository.class]
+2019-May-01 00:06:20.881 DEBUG [restartedMain] o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\linkx\Documents\workspace-sts-3.9.8.RELEASE\datn_ver_001\datn\server\springmvcsmarthome\target\classes\com\edu\fa\springmvcsmarthome\repositories\UserAccountRepository.class]
+2019-May-01 00:06:20.923 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56ms. Found 9 repository interfaces.
+2019-May-01 00:06:21.709 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-May-01 00:06:21.712 INFO  [restartedMain] o.a.c.c.StandardService - Starting service [Tomcat]
+2019-May-01 00:06:21.715 INFO  [restartedMain] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-May-01 00:06:21.716 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - An older version [1.2.19] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-May-01 00:06:21.716 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-May-01 00:06:21.717 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-May-01 00:06:21.717 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-May-01 00:06:21.718 INFO  [restartedMain] o.a.c.c.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-May-01 00:06:21.773 INFO  [restartedMain] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2019-May-01 00:06:21.773 INFO  [restartedMain] o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 5904 ms
+2019-May-01 00:06:22.018 INFO  [restartedMain] o.m.d.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-May-01 00:06:22.075 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.UserAccountRepository…
+2019-May-01 00:06:22.108 INFO  [cluster-ClusterId{value='5cc8808e40205269ddd506cb', description='null'}-127.0.0.1:27017] o.m.d.connection - Opened connection [connectionId{localValue:186, serverValue:11434}] to 127.0.0.1:27017
+2019-May-01 00:06:22.120 INFO  [cluster-ClusterId{value='5cc8808e40205269ddd506cb', description='null'}-127.0.0.1:27017] o.m.d.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 6]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=690400}
+2019-May-01 00:06:22.135 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.UserAccountRepository.
+2019-May-01 00:06:22.230 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-May-01 00:06:22.232 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Role for index information.
+2019-May-01 00:06:22.232 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.UserAccount for index information.
+2019-May-01 00:06:22.250 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.AirConditionerRepository…
+2019-May-01 00:06:22.262 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.AirConditioner for index information.
+2019-May-01 00:06:22.267 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.AirConditionerRepository.
+2019-May-01 00:06:22.274 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.SequenceRepository…
+2019-May-01 00:06:22.280 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Sequence for index information.
+2019-May-01 00:06:22.289 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.SequenceRepository.
+2019-May-01 00:06:22.345 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.AutomationStateRepository…
+2019-May-01 00:06:22.350 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.AutomationState for index information.
+2019-May-01 00:06:22.395 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.AutomationStateRepository.
+2019-May-01 00:06:22.405 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.LedRepository…
+2019-May-01 00:06:22.414 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Led for index information.
+2019-May-01 00:06:22.446 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.LedRepository.
+2019-May-01 00:06:22.461 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.HumidityRepository…
+2019-May-01 00:06:22.468 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Humidity for index information.
+2019-May-01 00:06:22.476 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.HumidityRepository.
+2019-May-01 00:06:22.514 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.LightDependentResistorRepository…
+2019-May-01 00:06:22.568 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.LightDependentResistor for index information.
+2019-May-01 00:06:22.575 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.LightDependentResistorRepository.
+2019-May-01 00:06:22.678 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.RainWaterSensorRepostitory…
+2019-May-01 00:06:22.693 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.RainWaterSensor for index information.
+2019-May-01 00:06:22.704 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.RainWaterSensorRepostitory.
+2019-May-01 00:06:22.716 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.edu.fa.springmvcsmarthome.repositories.TemperatureRepository…
+2019-May-01 00:06:22.765 DEBUG [restartedMain] o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.edu.fa.springmvcsmarthome.entities.Temperature for index information.
+2019-May-01 00:06:22.777 DEBUG [restartedMain] o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.edu.fa.springmvcsmarthome.repositories.TemperatureRepository.
+2019-May-01 00:06:22.933 INFO  [restartedMain] o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ab2a2be, org.springframework.security.web.context.SecurityContextPersistenceFilter@2216ffc5, org.springframework.security.web.header.HeaderWriterFilter@3b84e51e, org.springframework.security.web.authentication.logout.LogoutFilter@3e696d2f, com.edu.fa.springmvcsmarthome.securities.AuthenticationTokenFilter@3ce0aac5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@32ace0d4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@467d1ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18d7686b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5cece19f, org.springframework.security.web.session.SessionManagementFilter@76ea1e40, org.springframework.security.web.access.ExceptionTranslationFilter@783bdd86, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50ac7475]
+2019-May-01 00:06:23.368 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-May-01 00:06:23.413 INFO  [restartedMain] c.e.f.s.SpringmvcsmarthomeApplication - Started SpringmvcsmarthomeApplication in 7.727 seconds (JVM running for 39700.939)

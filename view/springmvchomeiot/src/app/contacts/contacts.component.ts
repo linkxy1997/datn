@@ -37,19 +37,19 @@ export class ContactsComponent implements OnInit {
     }, 2000);
     $(document).ready(() => {
       $('#toggle-event').change(() => {
-        if(this.automationState.automationState == 1){
+        if (this.automationState.automationState == 1) {
           this.controllLed();
         }
-        else{
+        else {
           $('#modal-body').html('You are actived Automation State');
           $('#exampleModal').modal('show')
         }
       })
       $('#toggle-air').change(() => {
-        if(this.automationState.automationState == 1){
+        if (this.automationState.automationState == 1) {
           this.controllAirConditioner();
         }
-        else{
+        else {
           $('#modal-body').html('You are actived Automation State');
           $('#exampleModal').modal('show')
         }
@@ -78,7 +78,7 @@ export class ContactsComponent implements OnInit {
   }
   setAutomationButton() {
     this.automationStateService.getAutomationState().subscribe(resp => {
-      this.automationState = resp.body 
+      this.automationState = resp.body
       if (this.automationState.automationState == 1) {
         $('#toggle-auto').bootstrapToggle('on');
       }
@@ -88,7 +88,17 @@ export class ContactsComponent implements OnInit {
     this.apiService.getStatesResponse().subscribe(resp => {
       this.states = { ...resp.body }
 
-    })
+    }, (err: HttpErrorResponse) => {
+      if (err.error instanceof Error) {
+        //A client-side or network error occurred.				 
+        console.log('An error occurred:', err.error.message);
+      } else {
+        //Backend returns unsuccessful response codes such as 404, 500 etc.				 
+        console.log('Backend returned status code: ', err.status);
+        console.log('Response body:', err.error);
+      }
+    }
+    );
   }
   public controllLed() {
     let stt = $('#toggle-event').prop('checked');

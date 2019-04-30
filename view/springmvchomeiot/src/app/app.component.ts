@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from './services/api.service';
 import { LedService } from './services/led.service';
-import { HttpClient } from '@angular/common/http';
+import { AuthenticationService } from './services/authentication.service';
 
 import { catchError, retry } from 'rxjs/operators';
 import { States } from "./entities/states";
@@ -14,33 +14,16 @@ import { States } from "./entities/states";
 export class AppComponent {
   title = 'springmvchomeiot';
   states: States;
-  constructor(private apiService: ApiService, private ledService: LedService) {
+  constructor(private authenticationService:AuthenticationService) {
 
   }
   ngOnInit() {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    //this.getStates();
-    // setInterval(() => {
-    //   this.getStates(); 
-    //   }, 2000);
+    
+    //this.authenticationService.logout();
   }
-
-  private getStates() {
-    // this.apiService.getData().subscribe(data=>{
-    //   var states = new States;
-    //   // states.ledStt=data.ledStt;
-    //   // states.humidity=data.humidity;
-    //   // states.lightDependent=data.lightDependent;
-    //   // states.raintStatus=data.raintStatus;
-    //   // states.temperature=data.temperature;
-    //   states = <States> data;
-    //   this.states=states;
-    //   console.log(this.states);
-    // })
-    this.apiService.getStatesResponse().subscribe(resp => {
-      this.states = { ...resp.body }
-    })
+  logOut(){
+    this.authenticationService.logout();
   }
-  
 }

@@ -9,7 +9,9 @@
 package com.edu.fa.springmvcsmarthome.utils;
 
 import java.text.ParseException;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,6 +46,13 @@ public class AuthenticationTokenUtil {
     return new Date(System.currentTimeMillis() + Constants.EXPIRE_TIME);
   }
 
+  public Date generateExpirationDateForWemosD1R2() {
+    Calendar myCalendar = new GregorianCalendar(Constants.YEAR, Constants.MONTH,
+        Constants.DAYOFMONTH, Constants.HOUROFDAY, Constants.MINUTE,
+        Constants.SECOND);
+    return myCalendar.getTime();
+  }
+
   public Date getExpirationDateFromToken(String token) {
     Date expiration = null;
     JWTClaimsSet claims = getClaimsFromToken(token);
@@ -61,5 +70,11 @@ public class AuthenticationTokenUtil {
   public boolean isTokenExpired(String token) {
     Date expiration = getExpirationDateFromToken(token);
     return expiration.before(new Date());
+  }
+
+  public static void main(String[] args) {
+    AuthenticationTokenUtil tokenUtil = new AuthenticationTokenUtil();
+    System.out.println(tokenUtil.getExpirationDateFromToken(
+        "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTIxMTIzOTksInVzZXJuYW1lIjoiYWRtaW4ifQ.gU9zJ_WiahK6ogZNnl-jvgdbto8JnAl6L8hZzY4oPuo"));
   }
 }

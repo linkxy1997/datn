@@ -24,7 +24,7 @@ import com.edu.fa.springmvcsmarthome.entities.AutomationState;
 import com.edu.fa.springmvcsmarthome.services.AutomationStateService;
 
 @CrossOrigin
-@RequestMapping(value = "/automation")
+@RequestMapping(value = "/api/automation")
 @RestController
 public class AutomationStateController {
   @Autowired

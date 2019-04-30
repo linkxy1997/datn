@@ -15,8 +15,10 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.edu.fa.springmvcsmarthome.entities.AutomationState;
 
 /**
+ * Extension of {@link MongoRepository} to provide additional methods to
+ * retrieve entities using the pagination and sorting abstraction.
+ * 
  * @author linkx
- *
  */
 public interface AutomationStateRepository
     extends MongoRepository<AutomationState, Integer> {

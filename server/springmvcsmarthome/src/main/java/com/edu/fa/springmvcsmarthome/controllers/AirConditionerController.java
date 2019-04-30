@@ -29,7 +29,7 @@ import com.edu.fa.springmvcsmarthome.utils.Constants;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/air")
+@RequestMapping(value = "/api/air")
 public class AirConditionerController {
   @Autowired
   private AirConditionerService airConditionerService;
