@@ -45,44 +45,17 @@ public class AutomationState implements Serializable {
     this.automationState = automationState;
   }
 
-  /*
-   * (non-Javadoc)
-   * 
-   * @see java.lang.Object#hashCode()
-   */
-  @Override
-  public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + id;
-    return result;
-  }
-
-  /*
-   * (non-Javadoc)
-   * 
-   * @see java.lang.Object#equals(java.lang.Object)
-   */
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj)
-      return true;
-    if (obj == null)
-      return false;
-    if (getClass() != obj.getClass())
-      return false;
-    AutomationState other = (AutomationState) obj;
-    if (id != other.id)
-      return false;
-    return true;
-  }
-
   public AutomationState(int id, int automationState) {
     super();
     this.id = id;
     this.automationState = automationState;
   }
 
+  /*
+   * (non-Javadoc)
+   * 
+   * @see java.lang.Object#toString()
+   */
   @Override
   public String toString() {
     return "AutomationState [id=" + id + ", automationState=" + automationState

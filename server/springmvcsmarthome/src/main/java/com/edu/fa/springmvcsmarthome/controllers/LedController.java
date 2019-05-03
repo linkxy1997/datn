@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,16 +37,15 @@ public class LedController {
    * @param led led object from client
    * @return new led
    */
-  @RequestMapping(value = "/save", method = RequestMethod.POST, produces = {
-      MediaType.APPLICATION_JSON_VALUE })
+  @PostMapping(value = "/save", produces = { MediaType.APPLICATION_JSON_VALUE })
   @ResponseBody
   public ResponseEntity<Led> save(@RequestBody Led led) {
     led.setLedId(sequenceService.getNextSequenceId(Constants.LED_SEQ_KEY));
     led.setTimeChange(new Date());
     if (ledService.save(led)) {
-      return new ResponseEntity<Led>(led, HttpStatus.OK);
+      return new ResponseEntity<>(led, HttpStatus.OK);
     }
-    return new ResponseEntity<Led>(HttpStatus.INTERNAL_SERVER_ERROR);
+    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
   }
 
   /**
@@ -54,7 +55,7 @@ public class LedController {
    * @throws IOException         if the file could not be read.
    * @throws CheckstyleException if the file is not a Java source.
    */
-  @RequestMapping(method = RequestMethod.GET)
+  @GetMapping(value = "")
   public String welcome() {
     return "Hello spring mvc";
   }

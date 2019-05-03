@@ -19,19 +19,19 @@ import java.io.Serializable;
 public class AuthenticationToken implements Serializable {
 
   private static final long serialVersionUID = 8161418860537050301L;
-  private String authenticationToken;
+  private String authToken;
 
   public String getAuthenticationToken() {
-    return authenticationToken;
+    return authToken;
   }
 
-  public void setAuthenticationToken(String authenticationToken) {
-    this.authenticationToken = authenticationToken;
+  public void setAuthenticationToken(String authToken) {
+    this.authToken = authToken;
   }
 
-  public AuthenticationToken(String authenticationToken) {
+  public AuthenticationToken(String authToken) {
     super();
-    this.authenticationToken = authenticationToken;
+    this.authToken = authToken;
   }
 
   public AuthenticationToken() {
@@ -45,8 +45,7 @@ public class AuthenticationToken implements Serializable {
    */
   @Override
   public String toString() {
-    return "AuthenticationToken [authenticationToken=" + authenticationToken
-        + "]";
+    return "AuthenticationToken [authToken=" + authToken + "]";
   }
 
 }

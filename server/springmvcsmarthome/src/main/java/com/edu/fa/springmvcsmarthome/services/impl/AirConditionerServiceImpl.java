@@ -33,13 +33,13 @@ public class AirConditionerServiceImpl implements AirConditionerService {
   @Override
   @Transactional
   public boolean save(final AirConditioner airConditioner) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return airConditionerRepository.save(airConditioner) != null;
   }
 
   @Override
   public Optional<AirConditioner> findTopByOrderByIdDesc() {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return airConditionerRepository.findTopByOrderByIdDesc();
   }
 

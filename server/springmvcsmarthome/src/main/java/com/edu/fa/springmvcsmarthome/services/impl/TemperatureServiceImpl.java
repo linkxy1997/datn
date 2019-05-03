@@ -27,8 +27,8 @@ public class TemperatureServiceImpl implements TemperatureService {
    * (non-Javadoc)
    *
    * @see
-   * com.edu.fa.springmvchomeiot.services.TemperatureService#saveTemperature(com.
-   * edu.fa.springmvchomeiot.entities.Temperature)
+   * com.edu.fa.springmvchomeiot.services.TemperatureService#saveTemperature(
+   * com. edu.fa.springmvchomeiot.entities.Temperature)
    */
   @Transactional
   @Override
@@ -41,11 +41,12 @@ public class TemperatureServiceImpl implements TemperatureService {
    * (non-Javadoc)
    *
    * @see
-   * com.edu.fa.springmvchomeiot.services.TemperatureService#getLastTemperature()
+   * com.edu.fa.springmvchomeiot.services.TemperatureService#getLastTemperature(
+   * )
    */
   @Override
   public Optional<Temperature> getLastTemperature() {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return temperatureRepository.findTopByOrderByTemperatureIdDesc();
   }
 

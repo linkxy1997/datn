@@ -37,12 +37,11 @@ public class UserDetailServiceImpl implements UserDetailsService {
   private UserAccountRepository userAccountRepository;
 
   @Override
-  public UserDetails loadUserByUsername(String username)
-      throws UsernameNotFoundException {
-    // TODO Auto-generated method stub
+  public UserDetails loadUserByUsername(String username) {
+    // Auto-generated method stub
     Optional<UserAccount> optional = userAccountRepository
         .findByUsername(username);
-    if (!optional.isPresent()) {
+    if (optional.isPresent()) {
       UserAccount userAccount = optional.get();
       boolean enabled = true;
       boolean accountNonExpired = true;
@@ -52,14 +51,11 @@ public class UserDetailServiceImpl implements UserDetailsService {
       for (Role role : userAccount.getRoles()) {
         authorities.add(new SimpleGrantedAuthority(role.getRoleName()));
       }
-      UserDetails userDetails = new User(username, userAccount.getPassword(),
+      return new User(userAccount.getUsername(), userAccount.getPassword(),
           enabled, accountNonExpired, credentialsNonExpired, accountNonLocked,
           authorities);
-      return userDetails;
     } else {
       throw new UsernameNotFoundException(username);
     }
-
   }
-
 }

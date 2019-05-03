@@ -60,7 +60,7 @@ public class Humidity implements Serializable {
   }
 
   /**
-   * TODO Create new Humidity object.
+   * Create new Humidity object.
    *
    * @param humidityId : Id.
    * @param humidity   : Humidity.
@@ -76,47 +76,11 @@ public class Humidity implements Serializable {
   /*
    * (non-Javadoc)
    *
-   * @see java.lang.Object#hashCode()
-   */
-  @Override
-  public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + humidityId;
-    return result;
-  }
-
-  /*
-   * (non-Javadoc)
-   *
-   * @see java.lang.Object#equals(java.lang.Object)
-   */
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) {
-      return true;
-    }
-    if (obj == null) {
-      return false;
-    }
-    if (getClass() != obj.getClass()) {
-      return false;
-    }
-    Humidity other = (Humidity) obj;
-    if (humidityId != other.humidityId) {
-      return false;
-    }
-    return true;
-  }
-
-  /*
-   * (non-Javadoc)
-   *
    * @see java.lang.Object#toString()
    */
   @Override
   public String toString() {
-    return "Humidity [humidityId=" + humidityId + ", humidity=" + humidity + ", timeAdd=" + timeAdd
-        + "]";
+    return "Humidity [humidityId=" + humidityId + ", humidity=" + humidity
+        + ", timeAdd=" + timeAdd + "]";
   }
 }

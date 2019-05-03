@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document(collection = "Sequence")
 public class Sequence implements Serializable {
-  /**  Serializable UID. */
+  /** Serializable UID. */
   private static final long serialVersionUID = 1L;
 
   @Id
@@ -34,6 +34,17 @@ public class Sequence implements Serializable {
 
   public void setSeq(int seq) {
     this.seq = seq;
+  }
+
+  public Sequence(String id, int seq) {
+    super();
+    this.id = id;
+    this.seq = seq;
+  }
+
+  public Sequence() {
+    super();
+    // Auto-generated constructor stub
   }
 
 }

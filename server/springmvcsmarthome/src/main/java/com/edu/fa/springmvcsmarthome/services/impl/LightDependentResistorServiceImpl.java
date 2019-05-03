@@ -20,7 +20,8 @@ import com.edu.fa.springmvcsmarthome.repositories.LightDependentResistorReposito
 import com.edu.fa.springmvcsmarthome.services.LightDependentResistorService;
 
 @Service
-public class LightDependentResistorServiceImpl implements LightDependentResistorService {
+public class LightDependentResistorServiceImpl
+    implements LightDependentResistorService {
   @Autowired
   private LightDependentResistorRepository lightDependentResistorRepository;
 
@@ -28,15 +29,16 @@ public class LightDependentResistorServiceImpl implements LightDependentResistor
    * (non-Javadoc)
    *
    * @see
-   * com.edu.fa.springmvchomeiot.services.LightDependentResistorService#save(com.
-   * edu.fa.springmvchomeiot.entities.LightDependentResistor)
+   * com.edu.fa.springmvchomeiot.services.LightDependentResistorService#save(
+   * com. edu.fa.springmvchomeiot.entities.LightDependentResistor)
    */
   @Transactional
   @Override
   public boolean save(LightDependentResistor lightDependentResistor) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     lightDependentResistor.setTimeChange(new Date());
-    return lightDependentResistorRepository.save(lightDependentResistor) != null;
+    return lightDependentResistorRepository
+        .save(lightDependentResistor) != null;
   }
 
   /*
@@ -47,7 +49,7 @@ public class LightDependentResistorServiceImpl implements LightDependentResistor
    */
   @Override
   public Optional<LightDependentResistor> getLastLightDependentResistor() {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return lightDependentResistorRepository.findTopByOrderByIdDesc();
   }
 

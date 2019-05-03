@@ -33,7 +33,7 @@ public class RainWaterSensorServiceImpl implements RainWaterSensorService {
   @Transactional
   @Override
   public boolean save(RainWaterSensor rainWaterSensor) {
-    // TODO Auto-generated method stub
+    //  Auto-generated method stub
     return rainWaterSensorRepostitory.save(rainWaterSensor) != null;
   }
 
@@ -45,7 +45,7 @@ public class RainWaterSensorServiceImpl implements RainWaterSensorService {
    */
   @Override
   public Optional<RainWaterSensor> getLastRainWaterSensor() {
-    // TODO Auto-generated method stub
+    //  Auto-generated method stub
     return rainWaterSensorRepostitory.findTopByOrderByRainIdDesc();
   }
 

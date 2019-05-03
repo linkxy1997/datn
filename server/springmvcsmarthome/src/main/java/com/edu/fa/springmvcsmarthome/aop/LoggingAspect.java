@@ -21,7 +21,7 @@ public class LoggingAspect {
       .getLogger(LoggingAspect.class);
 
   /**
-   * This function TODO logging BeforeGetCurrentLedStt method.
+   * This function to logging BeforeGetCurrentLedStt method.
    *
    * @param joinPoint is BeforeGetCurrentLedStt.
    */
@@ -35,7 +35,7 @@ public class LoggingAspect {
   }
 
   /**
-   * This function TODO logging BeforeSaveLed method.
+   * This function to logging BeforeSaveLed method.
    *
    * @param joinPoint jointPoint is BeforeSaveLed.
    */

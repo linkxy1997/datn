@@ -34,20 +34,19 @@ public class UserAccountServiceImpl implements UserAccountService {
    */
   @Override
   public Optional<UserAccount> findByUsername(String username) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return userAccountRepository.findByUsername(username);
   }
 
   @Override
   public boolean findByUsername(UserAccount userAccount) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     Optional<UserAccount> optional = userAccountRepository
         .findByUsername(userAccount.getUsername());
     if (optional.isPresent()) {
       String rawPassword = userAccount.getPassword();
-      boolean flag = passwordEncoder.matches(rawPassword,
-          optional.get().getPassword());
-      return flag;
+
+      return passwordEncoder.matches(rawPassword, optional.get().getPassword());
     }
     return false;
   }

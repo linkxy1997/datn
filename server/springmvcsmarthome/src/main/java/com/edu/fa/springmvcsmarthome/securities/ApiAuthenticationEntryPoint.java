@@ -37,7 +37,7 @@ public final class ApiAuthenticationEntryPoint
   public void commence(HttpServletRequest request, HttpServletResponse response,
       AuthenticationException authException)
       throws IOException, ServletException {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
     response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
     ApiError apiError = new ApiError(HttpStatus.UNAUTHORIZED, new Date(),

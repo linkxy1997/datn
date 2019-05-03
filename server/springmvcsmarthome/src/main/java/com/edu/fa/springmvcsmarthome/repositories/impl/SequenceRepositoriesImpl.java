@@ -24,19 +24,17 @@ public class SequenceRepositoriesImpl implements SequenceRepositories {
    */
   @Override
   public Sequence getNextSequenceId(String key) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     Query query = new Query(Criteria.where("_id").is(key));
     // increase sequence id by 1
     Update update = new Update();
     update.inc("seq", 1);
 
-    // return new increased id
     FindAndModifyOptions options = new FindAndModifyOptions();
     options.returnNew(true);
-
-    // this is the magic happened.
-    Sequence seqId = mongoOperations.findAndModify(query, update, options, Sequence.class);
-    return seqId;
+    // return new increased id
+    return mongoOperations.findAndModify(query, update, options,
+        Sequence.class);
   }
 
 }

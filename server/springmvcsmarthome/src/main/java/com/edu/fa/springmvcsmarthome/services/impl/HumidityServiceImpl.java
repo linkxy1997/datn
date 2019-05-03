@@ -33,7 +33,7 @@ public class HumidityServiceImpl implements HumidityService {
   @Override
   @Transactional
   public boolean save(Humidity humidity) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     humidity.setTimeAdd(new Date());
     return humidityRepository.save(humidity) != null;
   }
@@ -45,7 +45,7 @@ public class HumidityServiceImpl implements HumidityService {
    */
   @Override
   public Optional<Humidity> getLastHumidity() {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return humidityRepository.findTopByOrderByHumidityIdDesc();
   }
 

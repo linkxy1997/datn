@@ -14,8 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.edu.fa.springmvcsmarthome.entities.Temperature;
@@ -33,14 +33,13 @@ public class TemperatureController {
   private SequenceService sequenceService;
 
   /**
-   * TODO save new Temperature.
+   *  save new Temperature.
    *
    * @param temp temp.
    * @return
    */
 
-  @RequestMapping(value = "/save", method = RequestMethod.POST, produces = {
-      MediaType.APPLICATION_JSON_VALUE })
+  @PostMapping(value = "/save", produces = { MediaType.APPLICATION_JSON_VALUE })
   public boolean saveTemperature(@ModelAttribute Temperature temperature) {
     temperature.setTemperatureId(
         sequenceService.getNextSequenceId(Constants.TEMP_SEQ_KEY));

@@ -36,10 +36,10 @@ public class AuthenticationTokenServiceImpl
 
   @Override
   public String generateTokenLogin(String username) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     String token = null;
     try {
-      // TODO Create HMAC signer
+      // Create HMAC signer
       JWSSigner signer = new MACSigner(
           authenticationTokenUtil.generateShareSecret());
       JWTClaimsSet.Builder builder = new JWTClaimsSet.Builder();
@@ -51,14 +51,16 @@ public class AuthenticationTokenServiceImpl
 
       JWSHeader jwsHeader = new JWSHeader(JWSAlgorithm.HS256);
       SignedJWT signedJWT = new SignedJWT(jwsHeader, claimsSet);
-      // TODO Apply the HMAC protection
+      // Apply the HMAC protection
       signedJWT.sign(signer);
-      // TODO Serialize to compact form, produces something like
+      // Serialize to compact form, produces something like
       // eyJhbGciOiJIUzI1NiJ9.SGVsbG8sIHdvcmxkIQ.onO9Ihudz3WkiauDO2Uhyuz0Y18UASXlSc1eS0NkWyA
       token = signedJWT.serialize();
     } catch (JOSEException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
+      // Auto-generated catch block
+      if (LOGGER.isErrorEnabled()) {
+        LOGGER.error(e.getMessage(), e);
+      }
     }
     return token;
   }
@@ -74,20 +76,14 @@ public class AuthenticationTokenServiceImpl
     if (username == null || username.isEmpty()) {
       return false;
     }
-    if (authenticationTokenUtil.isTokenExpired(token)) {
-      return false;
-    }
-    return true;
+    return !authenticationTokenUtil.isTokenExpired(token);
   }
 
   @Override
-  public String getUsernameFromToken(String token)
-      throws ParseException, NullPointerException {
-    // TODO Auto-generated method stub
-    String username = null;
+  public String getUsernameFromToken(String token) throws ParseException {
+    // Auto-generated method stub
     JWTClaimsSet claims = authenticationTokenUtil.getClaimsFromToken(token);
-    username = claims.getStringClaim(Constants.USERNAME);
-    return username;
+    return claims.getStringClaim(Constants.USERNAME);
   }
 
 }

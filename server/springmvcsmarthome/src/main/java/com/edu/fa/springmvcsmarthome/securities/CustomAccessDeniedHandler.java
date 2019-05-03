@@ -30,9 +30,7 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
   public void handle(HttpServletRequest request, HttpServletResponse response,
       AccessDeniedException accessDeniedException)
       throws IOException, ServletException {
-    // TODO Auto-generated method stub
-    Authentication auth = SecurityContextHolder.getContext()
-        .getAuthentication();
+    // Auto-generated method stub
     response.sendError(HttpServletResponse.SC_FORBIDDEN, "Access Denied!");
     response.setStatus(HttpServletResponse.SC_FORBIDDEN);
     ApiError apiError = new ApiError(HttpStatus.FORBIDDEN, new Date(),

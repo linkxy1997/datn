@@ -15,7 +15,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 public class SpringmvcsmarthomeApplication
     extends SpringBootServletInitializer {
   /**
-   * TODO entrypoint of system.
+   * entrypoint of system.
    * 
    * @param args String arrays.
    */
@@ -26,7 +26,7 @@ public class SpringmvcsmarthomeApplication
   @Override
   protected SpringApplicationBuilder configure(
       final SpringApplicationBuilder builder) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return builder.sources(SpringmvcsmarthomeApplication.class);
   }
 

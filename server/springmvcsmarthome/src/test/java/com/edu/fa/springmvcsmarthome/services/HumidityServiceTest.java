@@ -47,14 +47,14 @@ public class HumidityServiceTest {
   public void testSaveTrue() {
     Humidity humidity = new Humidity(1, 80, new Date());
     when(humidityRepository.save(humidity)).thenReturn(humidity);
-    assertEquals("True", humidityService.save(humidity), true);
+    assertEquals("True", true, humidityService.save(humidity));
   }
 
   @Test
   public void testSaveFalse() {
     Humidity humidity = new Humidity(1, 80, new Date());
     when(humidityRepository.save(humidity)).thenReturn(null);
-    assertEquals("True", humidityService.save(humidity), false);
+    assertEquals("True", false, humidityService.save(humidity));
   }
 
   @Test

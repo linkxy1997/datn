@@ -42,9 +42,9 @@ public class AirConditionerController {
     Optional<AirConditioner> optional = airConditionerService
         .findTopByOrderByIdDesc();
     if (optional.isPresent()) {
-      return new ResponseEntity<AirConditioner>(optional.get(), HttpStatus.OK);
+      return new ResponseEntity<>(optional.get(), HttpStatus.OK);
     }
-    return new ResponseEntity<AirConditioner>(HttpStatus.NOT_FOUND);
+    return new ResponseEntity<>(HttpStatus.NOT_FOUND);
   }
 
   @PostMapping(value = "/postAirStatus", produces = {
@@ -55,9 +55,8 @@ public class AirConditionerController {
     airConditioner
         .setId(sequenceService.getNextSequenceId(Constants.AIR_CONDITIONER));
     if (airConditionerService.save(airConditioner)) {
-      return new ResponseEntity<AirConditioner>(airConditioner,
-          HttpStatus.CREATED);
+      return new ResponseEntity<>(airConditioner, HttpStatus.CREATED);
     }
-    return new ResponseEntity<AirConditioner>(HttpStatus.INTERNAL_SERVER_ERROR);
+    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
   }
 }

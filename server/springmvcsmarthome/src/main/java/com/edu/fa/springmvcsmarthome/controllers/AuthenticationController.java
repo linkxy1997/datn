@@ -16,6 +16,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,7 +36,7 @@ public class AuthenticationController {
   @Autowired
   private AuthenticationTokenService authenticationTokenService;
 
-  @RequestMapping(value = "/login", method = RequestMethod.POST)
+  @PostMapping(value = "/login")
   public ResponseEntity<AuthenticationToken> login(HttpServletRequest request,
       @RequestBody UserAccount userAccount) {
     String result;
@@ -50,12 +51,11 @@ public class AuthenticationController {
       httpStatus = HttpStatus.BAD_REQUEST;
     }
     AuthenticationToken authenticationToken = new AuthenticationToken(result);
-    return new ResponseEntity<AuthenticationToken>(authenticationToken,
-        httpStatus);
+    return new ResponseEntity<>(authenticationToken, httpStatus);
   }
 
   @GetMapping(value = "/hello", produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<String> welcome() {
-    return new ResponseEntity<String>("Welcome", HttpStatus.OK);
+    return new ResponseEntity<>("Welcome", HttpStatus.OK);
   }
 }

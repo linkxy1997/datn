@@ -16,6 +16,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -62,11 +64,11 @@ public class StatesController {
   private AirConditionerService airConditionerService;
 
   /**
-   * TODO Send States to Wemos D1 R2.
+   * Send States to Wemos D1 R2.
    * 
    * @return ResponseEntity HttpStatus.OK if Wemos D1 R2 GET complete.
    */
-  @RequestMapping(value = "getStates", method = RequestMethod.GET, produces = {
+  @GetMapping(value = "getStates", produces = {
       MediaType.APPLICATION_JSON_VALUE })
   public ResponseEntity<States> getStates() {
     int ledStt = 0;
@@ -105,17 +107,17 @@ public class StatesController {
     }
     States states = new States(ledStt, humidity, temperature, lightDependent,
         raintStatus, airStt);
-    return new ResponseEntity<States>(states, HttpStatus.OK);
+    return new ResponseEntity<>(states, HttpStatus.OK);
   }
 
   /**
-   * TODO Receive States from Wemos D1 R2.
+   * Receive States from Wemos D1 R2.
    * 
    * @param states: Humidity,Temperature,RainSensor,LightSensor.
    * @return ResponseEntity: HttpStatus.OK if set true.
    * @throws MongoExceptionTranslator.
    */
-  @RequestMapping(value = "/setStates", method = RequestMethod.POST, produces = {
+  @PostMapping(value = "/setStates", produces = {
       MediaType.APPLICATION_JSON_VALUE })
   public ResponseEntity<States> setStates(@RequestBody States states) {
     Date timeChange = new Date();
@@ -138,8 +140,8 @@ public class StatesController {
         && lightDependentResistorService.save(resistor)
         && temperatureService.saveTemperature(temperature)
         && rainWaterSensorService.save(waterSensor)) {
-      return new ResponseEntity<States>(HttpStatus.CREATED);
+      return new ResponseEntity<>(HttpStatus.CREATED);
     }
-    return new ResponseEntity<States>(HttpStatus.INTERNAL_SERVER_ERROR);
+    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
   }
 }

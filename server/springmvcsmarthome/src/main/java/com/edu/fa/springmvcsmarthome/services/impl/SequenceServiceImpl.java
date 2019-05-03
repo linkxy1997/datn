@@ -34,7 +34,7 @@ public class SequenceServiceImpl implements SequenceService {
   @Override
   @Transactional
   public int getNextSequenceId(String key) {
-    // TODO Auto-generated method stub
+    //  Auto-generated method stub
     Sequence seqId = sequenceRepositories.getNextSequenceId(key);
     if (null == seqId) {
       Sequence sequence = new Sequence();

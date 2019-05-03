@@ -9,7 +9,6 @@
 package com.edu.fa.springmvcsmarthome.securities;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +19,9 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
@@ -32,7 +32,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 
-import com.edu.fa.springmvcsmarthome.customexception.UnauthorisedException;
 import com.edu.fa.springmvcsmarthome.entities.Role;
 import com.edu.fa.springmvcsmarthome.entities.UserAccount;
 import com.edu.fa.springmvcsmarthome.services.AuthenticationTokenService;
@@ -46,6 +45,8 @@ public class AuthenticationTokenFilter
   private UserAccountService userAccountService;
   @Autowired
   private AuthenticationTokenService authenticationTokenService;
+  private static final Logger LOGGER = LoggerFactory
+      .getLogger(AuthenticationTokenFilter.class);
 
   /*
    * (non-Javadoc)
@@ -57,7 +58,7 @@ public class AuthenticationTokenFilter
   @Override
   public void doFilter(ServletRequest request, ServletResponse response,
       FilterChain chain) throws IOException, ServletException {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     HttpServletRequest httpServletRequest = (HttpServletRequest) request;
     String authToken = httpServletRequest.getHeader(Constants.TOKEN_HEADER);
     String username = null;
@@ -66,8 +67,10 @@ public class AuthenticationTokenFilter
         username = authenticationTokenService.getUsernameFromToken(authToken);
       }
     } catch (ParseException | NullPointerException e) {
-      // TODO Auto-generated catch block
-      
+      // Auto-generated catch block
+      if (LOGGER.isErrorEnabled()) {
+        LOGGER.error(e.getMessage(), e);
+      }
     }
     Optional<UserAccount> optional = userAccountService
         .findByUsername(username);

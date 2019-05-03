@@ -37,7 +37,9 @@ public class AuthenticationTokenUtil {
         claims = signedJWT.getJWTClaimsSet();
       }
     } catch (ParseException | JOSEException e) {
-      LOGGER.error(e.getMessage(), e);
+      if (LOGGER.isErrorEnabled()) {
+        LOGGER.error(e.getMessage(), e);
+      }
     }
     return claims;
   }
@@ -54,27 +56,17 @@ public class AuthenticationTokenUtil {
   }
 
   public Date getExpirationDateFromToken(String token) {
-    Date expiration = null;
     JWTClaimsSet claims = getClaimsFromToken(token);
-    expiration = claims.getExpirationTime();
-    return expiration;
+    return claims.getExpirationTime();
   }
 
   public byte[] generateShareSecret() {
     // Generate 256-bit (32-byte) shared secret
-    byte[] sharedSecret = new byte[32];
-    sharedSecret = Constants.SECRET_KEY.getBytes();
-    return sharedSecret;
+    return Constants.SECRET_KEY.getBytes();
   }
 
   public boolean isTokenExpired(String token) {
     Date expiration = getExpirationDateFromToken(token);
     return expiration.before(new Date());
-  }
-
-  public static void main(String[] args) {
-    AuthenticationTokenUtil tokenUtil = new AuthenticationTokenUtil();
-    System.out.println(tokenUtil.getExpirationDateFromToken(
-        "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTIxMTIzOTksInVzZXJuYW1lIjoiYWRtaW4ifQ.gU9zJ_WiahK6ogZNnl-jvgdbto8JnAl6L8hZzY4oPuo"));
   }
 }

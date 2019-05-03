@@ -36,11 +36,9 @@ public class AutomationStateController {
       @RequestBody AutomationState automationState) {
     automationState.setId(1);
     if (automationStateService.saveOrUpdate(automationState)) {
-      return new ResponseEntity<AutomationState>(automationState,
-          HttpStatus.OK);
+      return new ResponseEntity<>(automationState, HttpStatus.OK);
     }
-    return new ResponseEntity<AutomationState>(
-        HttpStatus.INTERNAL_SERVER_ERROR);
+    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
   }
 
   @GetMapping(value = "/getState", produces = {
@@ -48,12 +46,11 @@ public class AutomationStateController {
   public ResponseEntity<AutomationState> getAutomationState() {
     Optional<AutomationState> optional = automationStateService.findOne(1);
     if (optional.isPresent()) {
-      return new ResponseEntity<AutomationState>(optional.get(), HttpStatus.OK);
+      return new ResponseEntity<>(optional.get(), HttpStatus.OK);
     } else {
       AutomationState automationState = new AutomationState(1, 0);
       automationStateService.saveOrUpdate(automationState);
-      return new ResponseEntity<AutomationState>(automationState,
-          HttpStatus.CREATED);
+      return new ResponseEntity<>(automationState, HttpStatus.CREATED);
     }
   }
 }

@@ -19,11 +19,23 @@ import com.mongodb.ServerAddress;
 @EnableMongoRepositories(basePackages = "com.edu.fa.springmvcsmarthome.repositories")
 public class MongoConfig extends AbstractMongoConfiguration {
 
+  /*
+   * (non-Javadoc)
+   * 
+   * @see org.springframework.data.mongodb.config.MongoConfigurationSupport#
+   * getDatabaseName()
+   */
   @Override
   protected String getDatabaseName() {
     return "HomeIoT";
   }
 
+  /*
+   * (non-Javadoc)
+   * 
+   * @see org.springframework.data.mongodb.config.AbstractMongoConfiguration#
+   * mongoClient()
+   */
   @Override
   public MongoClient mongoClient() {
     ServerAddress serverAddress = new ServerAddress("127.0.0.1", 27017);

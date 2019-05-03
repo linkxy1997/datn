@@ -33,7 +33,7 @@ public class LedServiceImpl implements LedService {
   @Transactional
   @Override
   public boolean save(final Led led) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return ledRepository.save(led) != null;
   }
 
@@ -44,7 +44,7 @@ public class LedServiceImpl implements LedService {
    */
   @Override
   public Optional<Led> getCurrentLedStt() {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return ledRepository.findTopByOrderByLedIdDesc();
   }
 

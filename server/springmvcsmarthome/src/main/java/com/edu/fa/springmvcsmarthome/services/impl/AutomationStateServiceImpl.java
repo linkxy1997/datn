@@ -23,15 +23,14 @@ public class AutomationStateServiceImpl implements AutomationStateService {
 
   @Override
   public boolean saveOrUpdate(AutomationState automationState) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return automationStateRepository.save(automationState) != null;
   }
 
   @Override
   public Optional<AutomationState> findOne(int id) {
-    // TODO Auto-generated method stub
-    Optional<AutomationState> optional = automationStateRepository.findById(id);
-    return optional;
+    // Auto-generated method stub
+    return automationStateRepository.findById(id);
   }
 
 }
