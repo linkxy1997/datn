@@ -12,7 +12,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.edu.fa.springmvcsmarthome.entities.AutomationState;
+import com.edu.fa.springmvcsmarthome.entities.Automation;
 import com.edu.fa.springmvcsmarthome.repositories.AutomationStateRepository;
 import com.edu.fa.springmvcsmarthome.services.AutomationStateService;
 
@@ -22,13 +22,13 @@ public class AutomationStateServiceImpl implements AutomationStateService {
   private AutomationStateRepository automationStateRepository;
 
   @Override
-  public boolean saveOrUpdate(AutomationState automationState) {
+  public boolean saveOrUpdate(Automation automation) {
     // Auto-generated method stub
-    return automationStateRepository.save(automationState) != null;
+    return automationStateRepository.save(automation) != null;
   }
 
   @Override
-  public Optional<AutomationState> findOne(int id) {
+  public Optional<Automation> findOne(int id) {
     // Auto-generated method stub
     return automationStateRepository.findById(id);
   }

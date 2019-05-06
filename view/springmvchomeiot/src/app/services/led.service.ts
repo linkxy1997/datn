@@ -12,9 +12,13 @@ export class LedService {
   apiURL: string = Constant.API_URL + '/led';
   constructor(private httpClient: HttpClient) { }
   private httpOptions() {
+    let token = localStorage.getItem('AuthenticationToken');
+    const au=token.split('"');
     let headers = new HttpHeaders({
-      'Content-Type': 'application/json;charset=UTF-8'
+      'Content-Type': 'application/json;charset=UTF-8',
+      'Authorization':token
     })
+    return headers;
     return headers;
   }
   addLed(led: Led): Observable<HttpResponse<Led>> {

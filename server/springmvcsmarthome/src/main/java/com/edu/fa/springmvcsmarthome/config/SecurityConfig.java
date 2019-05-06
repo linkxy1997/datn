@@ -7,18 +7,14 @@
  */
 package com.edu.fa.springmvcsmarthome.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -33,8 +29,6 @@ import com.edu.fa.springmvcsmarthome.utils.Constants;
 @EnableWebSecurity
 @EnableWebMvc
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-  @Autowired
-  private UserDetailsService userDetailsService;
 
   @Bean
   public AuthenticationTokenFilter authenticationTokenFilter()
@@ -61,19 +55,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     return super.authenticationManager();
   }
 
-  @Override
-  protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-    auth.authenticationProvider(authenticationProvider());
-  }
-
-  @Bean
-  public DaoAuthenticationProvider authenticationProvider() {
-    DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-    authProvider.setUserDetailsService(userDetailsService);
-    authProvider.setPasswordEncoder(encoder());
-    return authProvider;
-  }
-
   @Bean
   public PasswordEncoder encoder() {
     return new BCryptPasswordEncoder(11);
@@ -81,11 +62,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     http.csrf().ignoringAntMatchers(Constants.API_URI).disable();
-
-    http.authorizeRequests().antMatchers("/login**").permitAll();
-
+    http.authorizeRequests().antMatchers("/api/login**").permitAll();
     http.antMatcher(Constants.API_URI).httpBasic()
         .authenticationEntryPoint(apiAuthenticationEntryPoint()).and()
         .sessionManagement()

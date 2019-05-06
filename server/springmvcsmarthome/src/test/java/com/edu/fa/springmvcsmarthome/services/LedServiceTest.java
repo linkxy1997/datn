@@ -55,6 +55,13 @@ public class LedServiceTest {
   }
 
   @Test
+  public final void testSaveFalse() {
+    when(ledRepository.save(led)).thenReturn(null);
+    boolean flag = ledService.save(led);
+    assertEquals("False", false, flag);
+  }
+
+  @Test
   public final void testGetCurrentLedStt() {
     when(ledRepository.findTopByOrderByLedIdDesc()).thenReturn(optional);
     Optional<Led> optionalLed = ledService.getCurrentLedStt();

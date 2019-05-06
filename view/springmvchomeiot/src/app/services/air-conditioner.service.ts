@@ -15,9 +15,11 @@ export class AirConditionerService {
   private airUrl = Constant.API_URL + '/air/postAirStatus';
 
   public httpOptions():HttpHeaders {
+    let token = localStorage.getItem('AuthenticationToken');
+    const au=token.split('"');
     let headers = new HttpHeaders({
       'Content-Type': 'application/json;charset=UTF-8',
-      
+      'Authorization':token
     })
     return headers;
   }

@@ -14,7 +14,7 @@ import com.edu.fa.springmvcsmarthome.entities.RainWaterSensor;
 
 public interface RainWaterSensorService {
   /**
-   * TODO save new RainWaterSensor.
+   * save new RainWaterSensor.
    *
    * @param rainWaterSensor
    * @return

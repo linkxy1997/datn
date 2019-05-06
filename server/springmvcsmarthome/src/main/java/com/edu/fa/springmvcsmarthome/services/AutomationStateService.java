@@ -9,10 +9,10 @@ package com.edu.fa.springmvcsmarthome.services;
 
 import java.util.Optional;
 
-import com.edu.fa.springmvcsmarthome.entities.AutomationState;
+import com.edu.fa.springmvcsmarthome.entities.Automation;
 
 public interface AutomationStateService {
-  public abstract boolean saveOrUpdate(AutomationState automationState);
+  public abstract boolean saveOrUpdate(Automation automation);
 
-  public Optional<AutomationState> findOne(int id);
+  public Optional<Automation> findOne(int id);
 }

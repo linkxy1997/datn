@@ -27,7 +27,7 @@ public class Humidity implements Serializable {
   @Id
   private int humidityId;
   @Field(value = "Humidity")
-  private float humidity;
+  private float humi;
   @Field(value = "TimeAdd")
   private Date timeAdd;
 
@@ -40,11 +40,11 @@ public class Humidity implements Serializable {
   }
 
   public float getHumidity() {
-    return humidity;
+    return humi;
   }
 
-  public void setHumidity(float humidity) {
-    this.humidity = humidity;
+  public void setHumidity(float humi) {
+    this.humi = humi;
   }
 
   public Date getTimeAdd() {
@@ -66,10 +66,10 @@ public class Humidity implements Serializable {
    * @param humidity   : Humidity.
    * @param timeAdd    : timeAdd.
    */
-  public Humidity(int humidityId, float humidity, Date timeAdd) {
+  public Humidity(int humidityId, float humi, Date timeAdd) {
     super();
     this.humidityId = humidityId;
-    this.humidity = humidity;
+    this.humi = humi;
     this.timeAdd = timeAdd;
   }
 
@@ -80,7 +80,7 @@ public class Humidity implements Serializable {
    */
   @Override
   public String toString() {
-    return "Humidity [humidityId=" + humidityId + ", humidity=" + humidity
+    return "Humidity [humidityId=" + humidityId + ", humi=" + humi
         + ", timeAdd=" + timeAdd + "]";
   }
 }

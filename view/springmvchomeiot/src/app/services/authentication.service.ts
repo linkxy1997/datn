@@ -21,6 +21,7 @@ export class AuthenticationService {
         headers: this.httpOptions(),
         observe: 'response'
       }).pipe(tap(resp => {
+        //sessionStorage.setItem('AuthenticationToken', resp.body.authenticationToken);
         localStorage.setItem('AuthenticationToken', resp.body.authenticationToken)
       }));
   }

@@ -13,11 +13,12 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.edu.fa.springmvcsmarthome.dto.TemperatureDto;
 import com.edu.fa.springmvcsmarthome.entities.Temperature;
 import com.edu.fa.springmvcsmarthome.services.SequenceService;
 import com.edu.fa.springmvcsmarthome.services.TemperatureService;
@@ -33,16 +34,18 @@ public class TemperatureController {
   private SequenceService sequenceService;
 
   /**
-   *  save new Temperature.
+   * save new Temperature.
    *
    * @param temp temp.
    * @return
    */
 
   @PostMapping(value = "/save", produces = { MediaType.APPLICATION_JSON_VALUE })
-  public boolean saveTemperature(@ModelAttribute Temperature temperature) {
+  public boolean saveTemperature(@RequestBody TemperatureDto temperatureDto) {
+    Temperature temperature = new Temperature();
     temperature.setTemperatureId(
         sequenceService.getNextSequenceId(Constants.TEMP_SEQ_KEY));
+    temperature.setTemperature(temperatureDto.getTemp());
     temperature.setTimeAdd(new Date());
     return temperatureService.saveTemperature(temperature);
   }

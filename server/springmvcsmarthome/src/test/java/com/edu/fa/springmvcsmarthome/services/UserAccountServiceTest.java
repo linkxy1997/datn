@@ -39,6 +39,8 @@ public class UserAccountServiceTest {
   private PasswordEncoder passwordEncoder;
   @InjectMocks
   private UserAccountServiceImpl userAccountService;
+  Optional<UserAccount> optional;
+  UserAccount userAccount;
 
   @BeforeClass
   public static void setUpBeforeClass() throws Exception {
@@ -47,6 +49,7 @@ public class UserAccountServiceTest {
   @Before
   public void setUp() throws Exception {
     MockitoAnnotations.initMocks(this);
+    optional = Optional.ofNullable(this.userAccount);
   }
 
   @Test
@@ -76,5 +79,16 @@ public class UserAccountServiceTest {
     assertEquals("True", account, userAccount);
     String roleName = account.getRoles().get(0).getRoleName();
     assertFalse("False", roleName.equals("ROLE_USER"));
+  }
+
+  @Test
+  public void testFindByUsernameNull() {
+    when(userAccountRepository.findByUsername(Mockito.anyString()))
+        .thenReturn(this.optional);
+    List<Role> roles = new ArrayList<>();
+    roles.add(new Role(1, "ROLE_ADMIN"));
+    UserAccount userAccount = new UserAccount(1, "admin", "123456", roles);
+    boolean flag = userAccountService.findByUsername(userAccount);
+    assertEquals("false", false, flag);
   }
 }

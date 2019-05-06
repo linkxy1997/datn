@@ -60,6 +60,13 @@ public class AirConditionerServiceTest {
   }
 
   @Test
+  public final void testSaveFalse() {
+    when(airRepository.save(air)).thenReturn(null);
+    boolean flag = airService.save(air);
+    assertEquals("False", false, flag);
+  }
+
+  @Test
   public final void testFindTopByOrderByIdDesc() {
     when(airRepository.findTopByOrderByIdDesc()).thenReturn(optional);
     Optional<AirConditioner> optionalAir = airService.findTopByOrderByIdDesc();

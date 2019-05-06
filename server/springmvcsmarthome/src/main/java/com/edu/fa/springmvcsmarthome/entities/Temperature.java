@@ -29,7 +29,7 @@ public class Temperature implements Serializable {
   @Id
   private int temperatureId;
   @Field(value = "Temperature")
-  private float temperature;
+  private float temp;
   @Field(value = "TimeAdd")
   private Date timeAdd;
 
@@ -42,11 +42,11 @@ public class Temperature implements Serializable {
   }
 
   public float getTemperature() {
-    return temperature;
+    return temp;
   }
 
-  public void setTemperature(float temperature) {
-    this.temperature = temperature;
+  public void setTemperature(float temp) {
+    this.temp = temp;
   }
 
   public Date getTimeAdd() {
@@ -68,10 +68,10 @@ public class Temperature implements Serializable {
    * @param temperature   : Temp.
    * @param timeAdd       : TimeAdd.
    */
-  public Temperature(int temperatureId, float temperature, Date timeAdd) {
+  public Temperature(int temperatureId, float temp, Date timeAdd) {
     super();
     this.temperatureId = temperatureId;
-    this.temperature = temperature;
+    this.temp = temp;
     this.timeAdd = timeAdd;
   }
 
@@ -82,8 +82,8 @@ public class Temperature implements Serializable {
    */
   @Override
   public String toString() {
-    return "Temperature [temperatureId=" + temperatureId + ", temperature="
-        + temperature + ", timeAdd=" + timeAdd + "]";
+    return "Temperature [temperatureId=" + temperatureId + ", temp=" + temp
+        + ", timeAdd=" + timeAdd + "]";
   }
 
 }

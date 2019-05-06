@@ -23,7 +23,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import com.edu.fa.springmvcsmarthome.entities.AutomationState;
+import com.edu.fa.springmvcsmarthome.entities.Automation;
 import com.edu.fa.springmvcsmarthome.repositories.AutomationStateRepository;
 import com.edu.fa.springmvcsmarthome.services.impl.AutomationStateServiceImpl;
 
@@ -33,8 +33,8 @@ public class AutomationStateServiceTest {
   private AutomationStateServiceImpl automationService;
   @Mock
   private AutomationStateRepository automationRepository;
-  AutomationState automationState;
-  Optional<AutomationState> optional;
+  Automation automation;
+  Optional<Automation> optional;
 
   @BeforeClass
   public static void setUpBeforeClass() throws Exception {
@@ -43,29 +43,29 @@ public class AutomationStateServiceTest {
   @Before
   public void setUp() throws Exception {
     MockitoAnnotations.initMocks(this);
-    automationState = new AutomationState(1, 1);
-    optional = Optional.of(automationState);
+    automation = new Automation(1, 1);
+    optional = Optional.of(automation);
   }
 
   @Test
   public final void testSaveOrUpdate() {
-    when(automationRepository.save(automationState))
-        .thenReturn(automationState);
-    boolean flag = automationService.saveOrUpdate(automationState);
+    when(automationRepository.save(automation))
+        .thenReturn(automation);
+    boolean flag = automationService.saveOrUpdate(automation);
     assertEquals("True", true, flag);
   }
 
   @Test
   public final void testSaveOrUpdateFalse() {
-    when(automationRepository.save(automationState)).thenReturn(null);
-    boolean flag = automationService.saveOrUpdate(automationState);
+    when(automationRepository.save(automation)).thenReturn(null);
+    boolean flag = automationService.saveOrUpdate(automation);
     assertEquals("True", false, flag);
   }
 
   @Test
   public final void testFindOne() {
     when(automationRepository.findById(Mockito.anyInt())).thenReturn(optional);
-    Optional<AutomationState> optional = automationService.findOne(2);
+    Optional<Automation> optional = automationService.findOne(2);
     assertEquals("True", optional, this.optional);
   }
 
@@ -73,7 +73,7 @@ public class AutomationStateServiceTest {
   public final void testFindOneNull() {
     this.optional = Optional.ofNullable(null);
     when(automationRepository.findById(Mockito.anyInt())).thenReturn(optional);
-    Optional<AutomationState> optional = automationService.findOne(2);
+    Optional<Automation> optional = automationService.findOne(2);
     assertFalse("False", optional.isPresent());
   }
 

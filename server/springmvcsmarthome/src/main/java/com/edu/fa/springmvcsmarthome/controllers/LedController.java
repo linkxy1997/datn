@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.edu.fa.springmvcsmarthome.dto.LedDto;
 import com.edu.fa.springmvcsmarthome.entities.Led;
 import com.edu.fa.springmvcsmarthome.services.LedService;
 import com.edu.fa.springmvcsmarthome.services.SequenceService;
@@ -39,13 +39,15 @@ public class LedController {
    */
   @PostMapping(value = "/save", produces = { MediaType.APPLICATION_JSON_VALUE })
   @ResponseBody
-  public ResponseEntity<Led> save(@RequestBody Led led) {
+  public ResponseEntity<Led> save(@RequestBody final LedDto ledDto) {
+    Led led = new Led();
     led.setLedId(sequenceService.getNextSequenceId(Constants.LED_SEQ_KEY));
+    led.setLedStt(ledDto.getStt());
     led.setTimeChange(new Date());
     if (ledService.save(led)) {
       return new ResponseEntity<>(led, HttpStatus.OK);
     }
-    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+    return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
   }
 
   /**

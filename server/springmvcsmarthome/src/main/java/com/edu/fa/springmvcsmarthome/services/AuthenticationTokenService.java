@@ -21,8 +21,8 @@ public interface AuthenticationTokenService {
   public abstract String generateTokenLogin(String username);
 
   public abstract boolean validateTokenLogin(String token)
-      throws ParseException, NullPointerException;
+      throws ParseException;
 
   public abstract String getUsernameFromToken(String token)
-      throws ParseException, NullPointerException;
+      throws ParseException;
 }

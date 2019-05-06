@@ -24,7 +24,7 @@ import com.edu.fa.springmvcsmarthome.entities.AirConditioner;
 public interface AirConditionerRepository
     extends MongoRepository<AirConditioner, Integer> {
   /**
-   * TODO FindTopByOrderByIdDesc.
+   * FindTopByOrderByIdDesc.
    * 
    * @return {@link Optional} AirConditioner.
    */

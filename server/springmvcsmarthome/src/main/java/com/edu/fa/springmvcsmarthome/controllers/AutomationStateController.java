@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.edu.fa.springmvcsmarthome.entities.AutomationState;
+import com.edu.fa.springmvcsmarthome.entities.Automation;
 import com.edu.fa.springmvcsmarthome.services.AutomationStateService;
 
 @CrossOrigin
@@ -32,25 +32,26 @@ public class AutomationStateController {
 
   @PostMapping(value = "/setState", produces = {
       MediaType.APPLICATION_JSON_VALUE })
-  public ResponseEntity<AutomationState> updateAutomationState(
-      @RequestBody AutomationState automationState) {
-    automationState.setId(1);
-    if (automationStateService.saveOrUpdate(automationState)) {
-      return new ResponseEntity<>(automationState, HttpStatus.OK);
+  public ResponseEntity<Automation> updateAutomationState(
+      @RequestBody Automation automation) {
+    System.out.println(automation);
+    automation.setId(1);
+    if (automationStateService.saveOrUpdate(automation)) {
+      return new ResponseEntity<>(automation, HttpStatus.OK);
     }
     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
   }
 
   @GetMapping(value = "/getState", produces = {
       MediaType.APPLICATION_JSON_VALUE })
-  public ResponseEntity<AutomationState> getAutomationState() {
-    Optional<AutomationState> optional = automationStateService.findOne(1);
+  public ResponseEntity<Automation> getAutomationState() {
+    Optional<Automation> optional = automationStateService.findOne(1);
     if (optional.isPresent()) {
       return new ResponseEntity<>(optional.get(), HttpStatus.OK);
     } else {
-      AutomationState automationState = new AutomationState(1, 0);
-      automationStateService.saveOrUpdate(automationState);
-      return new ResponseEntity<>(automationState, HttpStatus.CREATED);
+      Automation automation = new Automation(1, 0);
+      automationStateService.saveOrUpdate(automation);
+      return new ResponseEntity<>(automation, HttpStatus.CREATED);
     }
   }
 }

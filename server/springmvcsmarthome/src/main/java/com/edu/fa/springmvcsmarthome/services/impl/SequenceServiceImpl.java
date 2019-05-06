@@ -28,21 +28,20 @@ public class SequenceServiceImpl implements SequenceService {
    * (non-Javadoc)
    *
    * @see
-   * com.edu.fa.springmvchomeiot.services.SequenceService#getNextSequenceId(java.
-   * lang.String)
+   * com.edu.fa.springmvchomeiot.services.SequenceService#getNextSequenceId(
+   * java. lang.String)
    */
   @Override
   @Transactional
   public int getNextSequenceId(String key) {
-    //  Auto-generated method stub
+    // Auto-generated method stub
     Sequence seqId = sequenceRepositories.getNextSequenceId(key);
     if (null == seqId) {
       Sequence sequence = new Sequence();
       sequence.setId(key);
       sequence.setSeq(0);
-      if (sequenceRepository.save(sequence) != null) {
-        return sequence.getSeq();
-      }
+      sequenceRepository.save(sequence);
+      return sequence.getSeq();
     }
     return seqId.getSeq();
   }

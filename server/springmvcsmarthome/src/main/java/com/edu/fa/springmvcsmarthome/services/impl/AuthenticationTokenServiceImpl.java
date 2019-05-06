@@ -44,8 +44,6 @@ public class AuthenticationTokenServiceImpl
           authenticationTokenUtil.generateShareSecret());
       JWTClaimsSet.Builder builder = new JWTClaimsSet.Builder();
       builder.claim(Constants.USERNAME, username);
-//      builder.expirationTime(
-//          authenticationTokenUtil.generateExpirationDateForWemosD1R2());
       builder.expirationTime(authenticationTokenUtil.generateExpirationDate());
       JWTClaimsSet claimsSet = builder.build();
 
@@ -67,7 +65,7 @@ public class AuthenticationTokenServiceImpl
 
   @Override
   public boolean validateTokenLogin(String token) throws ParseException {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     if (token == null || token.trim().length() == 0) {
       return false;
     }

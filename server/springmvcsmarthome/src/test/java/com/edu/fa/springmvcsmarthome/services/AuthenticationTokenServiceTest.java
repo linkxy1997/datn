@@ -27,7 +27,7 @@ import com.edu.fa.springmvcsmarthome.utils.AuthenticationTokenUtil;
 import com.edu.fa.springmvcsmarthome.utils.Constants;
 import com.nimbusds.jwt.JWTClaimsSet;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class AuthenticationTokenServiceTest {
   @InjectMocks
   private AuthenticationTokenServiceImpl authenticationTokenService;
@@ -72,6 +72,36 @@ public class AuthenticationTokenServiceTest {
         .thenReturn(jWTClaimsSet);
     String username = authenticationTokenService.getUsernameFromToken(token);
     assertEquals("True", "admin", username);
+  }
+
+  @Test
+  public final void testValidateTokenLoginNull() throws ParseException {
+    when(authUtill.isTokenExpired(Mockito.anyString())).thenReturn(true);
+    when(authUtill.getClaimsFromToken(Mockito.anyString()))
+        .thenReturn(jWTClaimsSet);
+
+    boolean flag = authenticationTokenService.validateTokenLogin(null);
+    assertEquals("False", false, flag);
+  }
+
+  @Test
+  public final void testValidateTokenLoginEmptyToken() throws ParseException {
+    when(authUtill.isTokenExpired(Mockito.anyString())).thenReturn(true);
+    when(authUtill.getClaimsFromToken(Mockito.anyString()))
+        .thenReturn(jWTClaimsSet);
+
+    boolean flag = authenticationTokenService.validateTokenLogin("");
+    assertEquals("False", false, flag);
+  }
+
+  @Test
+  public final void testValidateTokenLoginUsernameNull() throws ParseException {
+    when(authUtill.isTokenExpired(Mockito.anyString())).thenReturn(true);
+    when(authUtill.getClaimsFromToken(Mockito.anyString()))
+        .thenReturn(jWTClaimsSet);
+
+    boolean flag = authenticationTokenService.validateTokenLogin("1234");
+    assertEquals("False", false, flag);
   }
 
 }

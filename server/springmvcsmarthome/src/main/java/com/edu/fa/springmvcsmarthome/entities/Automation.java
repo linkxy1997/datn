@@ -21,7 +21,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
  *
  */
 @Document(collection = "AutomationState")
-public class AutomationState implements Serializable {
+public class Automation implements Serializable {
 
   private static final long serialVersionUID = -4853986089801157374L;
   @Id
@@ -41,14 +41,14 @@ public class AutomationState implements Serializable {
     return automationState;
   }
 
-  public void setAutomationState(int automationState) {
-    this.automationState = automationState;
+  public void setAutomationState(int autoState) {
+    this.automationState = autoState;
   }
 
-  public AutomationState(int id, int automationState) {
+  public Automation(int id, int autoState) {
     super();
     this.id = id;
-    this.automationState = automationState;
+    this.automationState = autoState;
   }
 
   /*
@@ -62,7 +62,7 @@ public class AutomationState implements Serializable {
         + "]";
   }
 
-  public AutomationState() {
+  public Automation() {
     super();
   }
 

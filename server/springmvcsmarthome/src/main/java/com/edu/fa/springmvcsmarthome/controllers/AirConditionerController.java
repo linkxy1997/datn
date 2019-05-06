@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.edu.fa.springmvcsmarthome.dto.AirDto;
 import com.edu.fa.springmvcsmarthome.entities.AirConditioner;
 import com.edu.fa.springmvcsmarthome.services.AirConditionerService;
 import com.edu.fa.springmvcsmarthome.services.SequenceService;
@@ -50,10 +51,12 @@ public class AirConditionerController {
   @PostMapping(value = "/postAirStatus", produces = {
       MediaType.APPLICATION_JSON_VALUE })
   public ResponseEntity<AirConditioner> postAirConditionerStatus(
-      @RequestBody AirConditioner airConditioner) {
+      @RequestBody AirDto air) {
+    AirConditioner airConditioner = new AirConditioner();
     airConditioner.setTimeChange(new Date());
     airConditioner
         .setId(sequenceService.getNextSequenceId(Constants.AIR_CONDITIONER));
+    airConditioner.setAirStt(air.getAirStt());
     if (airConditionerService.save(airConditioner)) {
       return new ResponseEntity<>(airConditioner, HttpStatus.CREATED);
     }

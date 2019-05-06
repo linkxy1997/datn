@@ -23,7 +23,7 @@ import com.edu.fa.springmvcsmarthome.entities.LightDependentResistor;
 public interface LightDependentResistorRepository
     extends MongoRepository<LightDependentResistor, Integer> {
   /**
-   * TODO FindTopByOrderByIdDesc
+   * FindTopByOrderByIdDesc.
    * 
    * @return {@link Optional} LightDependentResistor.
    */

@@ -19,7 +19,7 @@ import com.edu.fa.springmvcsmarthome.entities.Led;
  */
 public interface LedService {
   /**
-   * TODO Save new led to Database.
+   * Save new led to Database.
    *
    * @param led
    *
@@ -27,7 +27,7 @@ public interface LedService {
   public boolean save(Led led);
 
   /**
-   * TODO Get last index of Led status.
+   * Get last index of Led status.
    *
    * @return
    */

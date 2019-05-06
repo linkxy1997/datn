@@ -37,7 +37,7 @@ export class ContactsComponent implements OnInit {
     }, 2000);
     $(document).ready(() => {
       $('#toggle-event').change(() => {
-        if (this.automationState.automationState == 1) {
+        if (this.automationState.automationState == 0) {
           this.controllLed();
         }
         else {
@@ -46,7 +46,7 @@ export class ContactsComponent implements OnInit {
         }
       })
       $('#toggle-air').change(() => {
-        if (this.automationState.automationState == 1) {
+        if (this.automationState.automationState == 0) {
           this.controllAirConditioner();
         }
         else {
@@ -79,6 +79,7 @@ export class ContactsComponent implements OnInit {
   setAutomationButton() {
     this.automationStateService.getAutomationState().subscribe(resp => {
       this.automationState = resp.body
+      console.log(this.automationState.automationState)
       if (this.automationState.automationState == 1) {
         $('#toggle-auto').bootstrapToggle('on');
       }

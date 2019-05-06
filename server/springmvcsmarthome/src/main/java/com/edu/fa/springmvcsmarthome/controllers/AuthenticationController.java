@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.edu.fa.springmvcsmarthome.dto.AuthenticationToken;
+import com.edu.fa.springmvcsmarthome.dto.UserAccountDto;
 import com.edu.fa.springmvcsmarthome.entities.UserAccount;
 import com.edu.fa.springmvcsmarthome.services.AuthenticationTokenService;
 import com.edu.fa.springmvcsmarthome.services.UserAccountService;
@@ -38,9 +38,12 @@ public class AuthenticationController {
 
   @PostMapping(value = "/login")
   public ResponseEntity<AuthenticationToken> login(HttpServletRequest request,
-      @RequestBody UserAccount userAccount) {
+      @RequestBody final UserAccountDto userDto) {
     String result;
     HttpStatus httpStatus;
+    UserAccount userAccount = new UserAccount();
+    userAccount.setUsername(userDto.getUsername());
+    userAccount.setPassword(userDto.getPassword());
     boolean flag = userAccountService.findByUsername(userAccount);
     if (flag) {
       result = authenticationTokenService

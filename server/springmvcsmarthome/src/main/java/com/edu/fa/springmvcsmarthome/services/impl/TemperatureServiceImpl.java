@@ -33,7 +33,7 @@ public class TemperatureServiceImpl implements TemperatureService {
   @Transactional
   @Override
   public boolean saveTemperature(Temperature temperature) {
-    // TODO Auto-generated method stub
+    // Auto-generated method stub
     return temperatureRepository.save(temperature) != null;
   }
 

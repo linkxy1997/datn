@@ -14,7 +14,7 @@ import com.edu.fa.springmvcsmarthome.entities.Temperature;
 
 public interface TemperatureService {
   /**
-   * TODO save new Temperature to Database.
+   * save new Temperature to Database.
    *
    * @param temperature : Temperature to save.
    * @return

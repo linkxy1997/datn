@@ -12,7 +12,7 @@ package com.edu.fa.springmvcsmarthome.repositories;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.edu.fa.springmvcsmarthome.entities.AutomationState;
+import com.edu.fa.springmvcsmarthome.entities.Automation;
 
 /**
  * Extension of {@link MongoRepository} to provide additional methods to
@@ -21,6 +21,6 @@ import com.edu.fa.springmvcsmarthome.entities.AutomationState;
  * @author linkx
  */
 public interface AutomationStateRepository
-    extends MongoRepository<AutomationState, Integer> {
+    extends MongoRepository<Automation, Integer> {
 
 }

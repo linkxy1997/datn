@@ -22,7 +22,7 @@ import com.edu.fa.springmvcsmarthome.entities.Humidity;
  */
 public interface HumidityRepository extends MongoRepository<Humidity, Integer> {
   /**
-   * TODO FindTopByOrderByHumidityIdDesc.
+   * FindTopByOrderByHumidityIdDesc.
    * 
    * @return {@link Optional} Humidity.
    */
