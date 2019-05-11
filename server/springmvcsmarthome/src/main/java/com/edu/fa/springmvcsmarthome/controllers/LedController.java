@@ -39,10 +39,8 @@ public class LedController {
    */
   @PostMapping(value = "/save", produces = { MediaType.APPLICATION_JSON_VALUE })
   @ResponseBody
-  public ResponseEntity<Led> save(@RequestBody final LedDto ledDto) {
-    Led led = new Led();
+  public ResponseEntity<Led> save(@RequestBody Led led) {
     led.setLedId(sequenceService.getNextSequenceId(Constants.LED_SEQ_KEY));
-    led.setLedStt(ledDto.getStt());
     led.setTimeChange(new Date());
     if (ledService.save(led)) {
       return new ResponseEntity<>(led, HttpStatus.OK);

@@ -3,7 +3,7 @@
 
     Created on: 1.05.2019
     Author: linkx
-    For KIT Wemos D1 R2 Post data to Server
+    For KIT Wemos D1 R2 get data from Server
 
 */
 #include <Arduino.h>
@@ -18,7 +18,7 @@
 
 const char* ssid = "NMT";
 const char* password = "24950381";
-const String HOST = "192.168.1.104";
+const String HOST = "192.168.1.103";
 const uint16_t PORT = 8080;
 const String API_URI_GET = "/api/states/getStates";
 const char* AUTHORIZATION = "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2NDgzOTksInVzZXJuYW1lIjoiYWRtaW4ifQ.aTttSa1-rFdU11E7IAiR9GPOYHlPpZ1Ue5wSAMSgEqM";
@@ -26,8 +26,8 @@ int autoState, ledStt, airStt, raintStatus;
 float temperature, humidity, lightDependent;
 void setup() {
   // put your setup code here, to run once:
+  pinMode(D3, OUTPUT);
   pinMode(D5, OUTPUT);
-  pinMode(D6, OUTPUT);
   pinMode(D7, OUTPUT);
   Serial.begin(115200);
   // Serial.setDebugOutput(true);
@@ -70,8 +70,8 @@ void setStates() {
             controllAir();
             controllLed();
           } else {
-            digitalWrite(D5, airStt);
-            digitalWrite(D6, ledStt);
+            digitalWrite(D3, airStt);
+            digitalWrite(D5, ledStt);
           }
         }
       } else {
@@ -87,16 +87,16 @@ void setStates() {
 void controllAir() {
   //If temp > 29 => turn on
   if (temperature > 29) {
-    digitalWrite(D5, HIGH);
+    digitalWrite(D3, HIGH);
   } else {
-    digitalWrite(D5, LOW);
+    digitalWrite(D3, LOW);
   }
 }
 void controllLed() {
   if (lightDependent < 50) {
-    digitalWrite(D6, HIGH);
+    digitalWrite(D5, HIGH);
   } else {
-    digitalWrite(D6, LOW);
+    digitalWrite(D5, LOW);
   }
 }
 void loop() {

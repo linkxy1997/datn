@@ -3,7 +3,7 @@
 
     Created on: 1.05.2019
     Author: linkx
-    For KIT Wemos D1 R2 get data from Server
+    For KIT Wemos D1 R2 Post data to Server
 
 */
 
@@ -23,7 +23,7 @@ DHTesp dht;
 
 const char* ssid = "NMT";
 const char* password = "24950381";
-const String HOST = "192.168.1.104";
+const String HOST = "192.168.1.103";
 const uint16_t PORT = 8080;
 const String API_URI_POST = "/api/states/setStates";
 const char* AUTHORIZATION = "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2NDgzOTksInVzZXJuYW1lIjoiYWRtaW4ifQ.aTttSa1-rFdU11E7IAiR9GPOYHlPpZ1Ue5wSAMSgEqM";

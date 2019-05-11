@@ -25,14 +25,14 @@ public class LoggingAspect {
    *
    * @param joinPoint is BeforeGetCurrentLedStt.
    */
-  @Before("execution(* com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl."
-      + "getCurrentLedStt(..))")
-  public void logBeforeGetCurrentLedStt(JoinPoint joinPoint) {
-    if (LOGGER.isInfoEnabled()) {
-      LOGGER.info("****LoggingAspect.logGetCurrentLedStt() : "
-          + joinPoint.toLongString());
-    }
-  }
+//  @Before("execution(* com.edu.fa.springmvcsmarthome.services.impl.LedServiceImpl."
+//      + "getCurrentLedStt(..))")
+//  public void logBeforeGetCurrentLedStt(JoinPoint joinPoint) {
+//    if (LOGGER.isInfoEnabled()) {
+//      LOGGER.info("****LoggingAspect.logGetCurrentLedStt() : "
+//          + joinPoint.toLongString());
+//    }
+//  }
 
   /**
    * This function to logging BeforeSaveLed method.
